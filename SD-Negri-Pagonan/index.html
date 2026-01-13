@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SD Negeri Pagonan - Grabag, Magelang</title>
+    <!-- Favicon menggunakan ic-logo.jpg dari folder img -->
+    <link rel="icon" href="img/ic-logo.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* PALET WARNA KREM & ALAM */
+        :root {
+            --cream-light: #FFFDF2;
+            --cream-warm: #F5EBDC;
+            --earth-brown: #5D4037;
+            --moss-green: #33691E;
+            --dark-brown: #3E2723;
+            --accent-gold: #C8A952;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--dark-brown);
+            background-color: var(--cream-light);
+        }
+
+        /* ========== HEADER & NAVIGASI ========== */
+        header {
+            background-color: var(--cream-light);
+            box-shadow: 0 2px 15px rgba(94, 64, 55, 0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--cream-warm);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            color: var(--earth-brown);
+            font-size: 1.7rem;
+            text-decoration: none;
+        }
+
+        /* Logo menggunakan ic-logo.jpg dari folder img */
+        .logo-img {
+            height: 50px;
+            width: 50px;
+            margin-right: 12px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .logo-text .sekolah {
+            font-size: 1.8rem;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text .alamat {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--accent-gold);
+            margin-top: 2px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-left: 2.5rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--earth-brown);
+            font-weight: 600;
+            padding: 0.5rem 0;
+            transition: all 0.3s ease;
+            position: relative;
+            font-size: 1rem;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--moss-green);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--moss-green);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--earth-brown);
+        }
+
+        /* ========== HERO SECTION DENGAN profil.jpg dari folder img ========== */
+        .hero {
+            height: 100vh;
+            /* Menggunakan img/profil.jpg sebagai background */
+            background: linear-gradient(rgba(94, 64, 55, 0.7), rgba(62, 39, 35, 0.85)),
+                        url('img/profil.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--cream-light);
+            padding: 0 2rem;
+            margin-top: 80px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.8rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            font-weight: 800;
+            color: white;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            line-height: 1.4;
+            font-weight: 300;
+            color: var(--cream-warm);
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--moss-green);
+            color: white;
+            padding: 1rem 2.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(51, 105, 30, 0.3);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--moss-green);
+            border-color: var(--moss-green);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(51, 105, 30, 0.4);
+        }
+
+        /* ========== SECTION UMUM ========== */
+        section {
+            padding: 6rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            text-align: center;
+            color: var(--earth-brown);
+            margin-bottom: 4rem;
+            font-size: 2.8rem;
+            position: relative;
+            font-weight: 700;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 5px;
+            background: linear-gradient(to right, var(--accent-gold), var(--moss-green));
+            bottom: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+        }
+
+        /* ========== PROFIL ========== */
+        .profil-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+            background-color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(94, 64, 55, 0.07);
+            border: 1px solid var(--cream-warm);
+        }
+
+        .profil-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .profil-text h3 {
+            color: var(--earth-brown);
+            margin-bottom: 1.8rem;
+            font-size: 2.2rem;
+            border-left: 5px solid var(--accent-gold);
+            padding-left: 1rem;
+        }
+
+        .profil-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .highlight-box {
+            background-color: var(--cream-warm);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--moss-green);
+            margin-top: 2rem;
+        }
+
+        .highlight-box strong {
+            color: var(--earth-brown);
+        }
+
+        .profil-img {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border: 8px solid white;
+        }
+
+        .profil-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .profil-img:hover img {
+            transform: scale(1.03);
+        }
+
+        /* ========== VISI MISI ========== */
+        #visi-misi {
+            background-color: var(--cream-warm);
+        }
+
+        .visi-misi-container {
+            display: flex;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 2.8rem;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(94, 64, 55, 0.06);
+            flex: 1;
+            min-width: 300px;
+            border-top: 6px solid;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(94, 64, 55, 0.12);
+        }
+
+        .card.visi {
+            border-top-color: var(--earth-brown);
+        }
+
+        .card.misi {
+            border-top-color: var(--moss-green);
+        }
+
+        .card h3 {
+            color: var(--earth-brown);
+            margin-bottom: 1.8rem;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .card h3 i {
+            margin-right: 15px;
+            font-size: 2.2rem;
+        }
+
+        .card.visi h3 i {
+            color: var(--earth-brown);
+        }
+
+        .card.misi h3 i {
+            color: var(--moss-green);
+        }
+
+        .card.misi ul {
+            list-style-position: inside;
+            padding-left: 0.5rem;
+        }
+
+        .card.misi li {
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            position: relative;
+        }
+
+        .card.misi li::before {
+            content: '✓';
+            color: var(--moss-green);
+            font-weight: bold;
+            margin-right: 12px;
+        }
+
+        /* ========== FASILITAS / GALERI ========== */
+        .gallery-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3.5rem auto;
+            font-size: 1.2rem;
+            color: var(--dark-brown);
+            line-height: 1.7;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            height: 240px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            border: 1px solid var(--cream-warm);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item.video-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(62, 39, 35, 0.4);
+            z-index: 1;
+        }
+
+        .gallery-item .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 4rem;
+            z-index: 2;
+            opacity: 0.9;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        /* ========== KONTAK ========== */
+        .kontak-container {
+            display: flex;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .kontak-info, .kontak-form {
+            flex: 1;
+            min-width: 320px;
+            background: white;
+            padding: 2.8rem;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(94, 64, 55, 0.06);
+            border: 1px solid var(--cream-warm);
+        }
+
+        .kontak-info h3, .kontak-form h3 {
+            color: var(--earth-brown);
+            margin-bottom: 2.2rem;
+            font-size: 2rem;
+            border-bottom: 2px solid var(--cream-warm);
+            padding-bottom: 0.8rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2.2rem;
+        }
+
+        .info-item i {
+            background-color: var(--cream-warm);
+            color: var(--earth-brown);
+            padding: 1rem;
+            border-radius: 50%;
+            margin-right: 1.5rem;
+            min-width: 55px;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+
+        .info-item h4 {
+            color: var(--earth-brown);
+            margin-bottom: 0.3rem;
+            font-size: 1.2rem;
+        }
+
+        .map {
+            height: 280px;
+            background-color: #eee;
+            border-radius: 12px;
+            margin-top: 2rem;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.7rem;
+            font-weight: 600;
+            color: var(--earth-brown);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border 0.3s;
+            background-color: var(--cream-light);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--moss-green);
+            box-shadow: 0 0 0 3px rgba(51, 105, 30, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 160px;
+            resize: vertical;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background-color: var(--earth-brown);
+            color: var(--cream-warm);
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        footer p:last-child {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--accent-gold);
+            font-style: italic;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 992px) {
+            .hero-content h1 { font-size: 3.2rem; }
+            section h2 { font-size: 2.5rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--cream-light);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+                padding: 1.5rem 0;
+                text-align: center;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                margin: 0;
+                padding: 0.9rem 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero-content h1 { font-size: 2.7rem; }
+            .hero-content .subtitle { font-size: 1.3rem; }
+            section { padding: 4rem 5%; }
+
+            .profil-content, .kontak-info, .kontak-form {
+                padding: 2rem;
+            }
+
+            .card { padding: 2.2rem; }
+            
+            /* Logo lebih kecil di mobile */
+            .logo-img {
+                height: 40px;
+                width: 40px;
+            }
+            .logo-text .sekolah {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero { margin-top: 70px; }
+            .hero-content h1 { font-size: 2.2rem; }
+            .logo-text .sekolah { font-size: 1.3rem; }
+            .btn { padding: 0.9rem 2rem; font-size: 1rem; }
+            .logo-img {
+                height: 35px;
+                width: 35px;
+                margin-right: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header & Navigasi -->
+    <header>
+        <div class="nav-container">
+            <a href="#beranda" class="logo">
+                <!-- Logo menggunakan ic-logo.jpg dari folder img -->
+                <img src="img/ic-logo.jpg" alt="Logo SD Negeri Pagonan" class="logo-img">
+                <div class="logo-text">
+                    <span class="sekolah">SD NEGERI PAGONAN</span>
+                    <span class="alamat">Grabag, Magelang</span>
+                </div>
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#beranda" class="nav-link active">Beranda</a></li>
+                <li><a href="#profil" class="nav-link">Profil</a></li>
+                <li><a href="#visi-misi" class="nav-link">Visi & Misi</a></li>
+                <li><a href="#fasilitas" class="nav-link">Fasilitas</a></li>
+                <li><a href="#kontak" class="nav-link">Kontak</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section dengan img/profil.jpg sebagai background -->
+    <section id="beranda" class="hero">
+        <div class="hero-content">
+            <h1>SD NEGERI PAGONAN</h1>
+            <p class="subtitle">Menumbuhkan Generasi Cerdas, Berkarakter, dan Berwawasan Lingkungan di Kecamatan Grabag</p>
+            <a href="#profil" class="btn">Jelajahi Sekolah Kami</a>
+        </div>
+    </section>
+
+    <!-- Profil Sekolah -->
+    <section id="profil">
+        <h2>Profil Sekolah</h2>
+        <div class="profil-content">
+            <div class="profil-text">
+                <h3>Sekolah Ramah dengan Warna Alam</h3>
+                <p>Selamat datang di <strong>SD Negeri Pagonan</strong>, lembaga pendidikan dasar yang telah menjadi bagian dari masyarakat Sidogede, Grabag, sejak <strong>31 Agustus 1985</strong>. Dengan identitas warna krem yang hangat dan menenangkan, kami berkomitmen menciptakan lingkungan belajar yang inspiratif dan menyenangkan.</p>
+                <p>Di bawah kepemimpinan <strong>Ibu Harti</strong> dan didukung oleh guru-guru yang berdedikasi, kami membimbing sekitar <strong>99 siswa</strong> untuk mengembangkan potensi akademik dan karakter mereka.</p>
+                <div class="highlight-box">
+                    <p><strong>NPSN:</strong> 20308003 | <strong>Status:</strong> Negeri<br>
+                    <strong>Akreditasi:</strong> B (Baik)<br>
+                    <strong>Filosofi Warna:</strong> Warna krem melambangkan kehangatan, kenyamanan, dan fondasi yang kuat bagi pertumbuhan ilmu.</p>
+                </div>
+            </div>
+            <div class="profil-img">
+                <!-- Menggunakan foto guru.jpg dari folder img -->
+                <img src="img/guru.jpg" alt="Guru dan Siswa SD Negeri Pagonan">
+            </div>
+        </div>
+    </section>
+
+    <!-- Visi & Misi -->
+    <section id="visi-misi">
+        <h2>Visi & Misi</h2>
+        <div class="visi-misi-container">
+            <div class="card visi">
+                <h3><i class="fas fa-eye"></i> Visi</h3>
+                <p>Mewujudkan peserta didik yang beriman, berakhlak mulia, cerdas, kreatif, peduli lingkungan, dan mampu berkontribusi bagi masyarakat, dilandasi semangat kekeluargaan yang hangat.</p>
+            </div>
+            <div class="card misi">
+                <h3><i class="fas fa-bullseye"></i> Misi</h3>
+                <ul>
+                    <li>Menyelenggarakan pembelajaran aktif dengan pendekatan yang menyenangkan dan berpusat pada siswa.</li>
+                    <li>Menanamkan nilai-nilai karakter, keimanan, dan cinta tanah air melalui pembiasaan dan keteladanan.</li>
+                    <li>Mengoptimalkan seluruh potensi dan bakat siswa baik di bidang akademik maupun non-akademik.</li>
+                    <li>Menjalin kemitraan yang erat dan harmonis dengan orang tua wali dan masyarakat sekitar.</li>
+                    <li>Menjaga dan mengembangkan lingkungan sekolah yang asri, hijau, bersih, sehat, dan nyaman.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fasilitas & Kegiatan -->
+    <section id="fasilitas">
+        <h2>Kegiatan & Fasilitas</h2>
+        <p class="gallery-intro">Berbagai kegiatan dan fasilitas yang mendukung pengembangan potensi siswa di SD Negeri Pagonan.</p>
+        <div class="gallery">
+            <!-- Menggunakan 6 foto dari folder img -->
+            <div class="gallery-item">
+                <img src="img/festival.jpg" alt="Festival Sekolah">
+            </div>
+            <div class="gallery-item">
+                <img src="img/guru.jpg" alt="Kegiatan Belajar Mengajar">
+            </div>
+            <div class="gallery-item">
+                <img src="img/lomba.jpg" alt="Lomba-lomba Siswa">
+            </div>
+            <div class="gallery-item">
+                <img src="img/lulus.jpg" alt="Wisuda dan Kelulusan">
+            </div>
+            <div class="gallery-item">
+                <img src="img/pelajaran.jpg" alt="Proses Pembelajaran">
+            </div>
+            <div class="gallery-item">
+                <img src="img/upacara.jpg" alt="Upacara Bendera">
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak & Lokasi -->
+    <section id="kontak">
+        <h2>Kontak & Lokasi</h2>
+        <div class="kontak-container">
+            <div class="kontak-info">
+                <h3>Kunjungi Kami</h3>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Alamat Lengkap</h4>
+                        <p>Jl. Kyai Rahmat Pagonan, Sidogede, Kec. Grabag, Kab. Magelang, Jawa Tengah 56196</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email & Informasi</h4>
+                        <p>18sdnpagonan@gmail.com<br>
+                        Operator: Ibu Rahmawati Solikhah</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-user-tie"></i>
+                    <div>
+                        <h4>Kepala Sekolah</h4>
+                        <p>Ibu Harti</p>
+                    </div>
+                </div>
+                <h4 style="margin-top: 2.5rem; margin-bottom: 1rem;">Peta Lokasi</h4>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.511307101456!2d110.319634!3d-7.348469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMjAnNTQuNSJTIDExMMKwMTknMTguNyJF!5e0!3m2!1sid!2sid!4v1621234567890!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="kontak-form">
+                <h3>Kirim Pesan</h3>
+                <form id="pesanForm">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Alamat Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subjek">Subjek</label>
+                        <input type="text" id="subjek" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pesan">Pesan Anda</label>
+                        <textarea id="pesan" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%; padding: 1.2rem;">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© <span id="tahun-sekarang"></span> SD Negeri Pagonan. Semua Hak Cipta Dilindungi.</p>
+        <p>Website Demo | Identitas Visual: Warna Krem - Hangat & Menyenangkan</p>
+    </footer>
+
+    <script>
+        // Inisialisasi Tahun di Footer
+        document.getElementById('tahun-sekarang').textContent = new Date().getFullYear();
+
+        // Toggle Menu Mobile
+        const mobileMenuBtn = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active')
+                ? '<i class="fas fa-times"></i>'
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Tutup Menu Mobile saat link diklik
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Smooth Scroll & Update Nav Link Aktif
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Update Link Aktif berdasarkan Scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            const scrollPos = window.scrollY + 100;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Handler Form Submit (Demo)
+        document.getElementById('pesanForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Terima kasih atas pesannya! (Fitur ini dalam mode demo. Pada website asli, pesan akan dikirim ke email sekolah.)');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
