@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMP Ma'arif Grabag - Sekolah Berakhlak Mulia</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo-mi.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        * {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(16, 82, 48, 0.92), rgba(34, 139, 34, 0.88)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23105230" width="1200" height="600"/><path fill="%23228B22" opacity="0.3" d="M0 300L50 325L100 275L150 325L200 300L250 350L300 300L350 325L400 275L450 325L500 300L550 350L600 300L650 325L700 275L750 325L800 300L850 350L900 300L950 325L1000 275L1050 325L1100 300L1150 350L1200 300V600H0Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #228B22, #32CD32);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-hover {
+            transition: all 0.4s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(34, 139, 34, 0.2);
+        }
+
+        .navbar-scroll {
+            transition: all 0.3s ease;
+        }
+
+        .navbar-scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .islamic-pattern {
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><g fill="%23228B22" opacity="0.05"><path d="M0 0h40v40H0zM40 40h40v40H40z"/></g></svg>');
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #228B22, #32CD32);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(34, 139, 34, 0.3);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #228B22, #32CD32);
+            margin: 16px auto 0;
+            border-radius: 2px;
+        }
+        
+        /* Logo styling */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <nav class="navbar-scroll fixed w-full top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <!-- Logo Sekolah -->
+                    <div class="logo-container">
+                        <img src="img/logo-mi.png" alt="Logo SMP Ma'arif Grabag" class="logo-img">
+                        <div>
+                            <h1 class="text-xl font-bold text-gray-800">SMP Ma'arif Grabag</h1>
+                            <p class="text-xs text-gray-600">Berakhlak Mulia, Berprestasi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="text-gray-700 hover:text-green-600 transition font-medium">Beranda</a>
+                    <a href="#profil" class="text-gray-700 hover:text-green-600 transition font-medium">Profil</a>
+                    <a href="#program" class="text-gray-700 hover:text-green-600 transition font-medium">Program</a>
+                    <a href="#ekskul" class="text-gray-700 hover:text-green-600 transition font-medium">Ekstrakurikuler</a>
+                    <a href="#fasilitas" class="text-gray-700 hover:text-green-600 transition font-medium">Fasilitas</a>
+                    <a href="#kontak" class="text-gray-700 hover:text-green-600 transition font-medium">Kontak</a>
+                </div>
+
+                <button class="md:hidden text-gray-700" onclick="toggleMenu()">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-3">
+                <a href="#beranda" class="block text-gray-700 hover:text-green-600 transition">Beranda</a>
+                <a href="#profil" class="block text-gray-700 hover:text-green-600 transition">Profil</a>
+                <a href="#program" class="block text-gray-700 hover:text-green-600 transition">Program</a>
+                <a href="#ekskul" class="block text-gray-700 hover:text-green-600 transition">Ekstrakurikuler</a>
+                <a href="#fasilitas" class="block text-gray-700 hover:text-green-600 transition">Fasilitas</a>
+                <a href="#kontak" class="block text-gray-700 hover:text-green-600 transition">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <span class="text-sm uppercase tracking-wider">Sekolah Islam Terpercaya</span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                        SMP Ma'arif <br/>
+                        <span class="text-yellow-300">Grabag</span>
+                    </h1>
+                    <p class="text-xl mb-8 text-gray-100 leading-relaxed">
+                        Membangun generasi yang berakhlak mulia, berprestasi, dan berilmu pengetahuan dengan landasan nilai-nilai Islami
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#profil" class="btn-primary text-white px-8 py-4 rounded-full font-semibold inline-flex items-center space-x-2">
+                            <span>Tentang Kami</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#kontak" class="bg-white text-green-700 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition inline-flex items-center space-x-2">
+                            <span>Kontak</span>
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                        <h3 class="text-white text-xl font-semibold mb-4 flex items-center">
+                            <i class="fas fa-video mr-3 text-yellow-400"></i>
+                            Profil Sekolah
+                        </h3>
+                        <div class="video-container">
+                            <iframe 
+                                src="https://drive.google.com/file/d/1_GnqcjOe4i5IommE1HEPD-SkqOV7-6sU/preview" 
+                                allow="autoplay; encrypted-media" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <p class="text-gray-200 text-sm mt-4">Lihat suasana belajar dan fasilitas lengkap di SMP Ma'arif Grabag</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-gradient mb-2">1987</div>
+                    <p class="text-gray-600">Tahun Berdiri</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-gradient mb-2">100+</div>
+                    <p class="text-gray-600">Siswa Aktif</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-gradient mb-2">15+</div>
+                    <p class="text-gray-600">Tenaga Pendidik</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profil Section -->
+    <section id="profil" class="py-20 islamic-pattern">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-4 section-title">Profil Sekolah</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto">Mengenal lebih dekat SMP Ma'arif Grabag</p>
+            
+            <!-- Sambutan Kepala Sekolah -->
+            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 mb-12 card-hover">
+                <div class="grid md:grid-cols-3 gap-8 items-center">
+                    <div class="text-center">
+                        <div class="w-48 h-48 mx-auto bg-gradient-to-br from-green-700 to-green-500 rounded-full flex items-center justify-center mb-4">
+                            <img src="img/logo-mi.png" alt="Logo SMP Ma'arif Grabag" class="w-32 h-32 object-contain">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Drs. H. Ahmad Fauzi, M.Pd.I</h3>
+                        <p class="text-green-600 font-semibold">Kepala Sekolah</p>
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <div class="flex items-start mb-4">
+                            <i class="fas fa-quote-left text-3xl text-green-600 mr-4 mt-2"></i>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-4">Sambutan Kepala Sekolah</h3>
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    Assalamu'alaikum Warahmatullahi Wabarakatuh. Puji syukur kehadirat Allah SWT yang telah memberikan rahmat dan karunia-Nya kepada kita semua. Sholawat serta salam semoga selalu tercurah kepada Nabi Muhammad SAW.
+                                </p>
+                                <p class="text-gray-700 leading-relaxed mb-4">
+                                    SMP Ma'arif Grabag berkomitmen untuk mencetak generasi yang tidak hanya unggul dalam prestasi akademik, tetapi juga memiliki akhlak mulia yang berlandaskan nilai-nilai Islam. Kami mengintegrasikan pembelajaran modern dengan pendidikan agama yang kuat.
+                                </p>
+                                <p class="text-gray-700 leading-relaxed">
+                                    Mari bersama-sama kita wujudkan visi sekolah untuk menciptakan siswa yang beriman, bertakwa, berilmu, dan berakhlak mulia. Wassalamu'alaikum Warahmatullahi Wabarakatuh.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visi Misi -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-green-700 to-green-500 rounded-3xl shadow-xl p-8 text-white card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-eye text-3xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold">Visi</h3>
+                    </div>
+                    <p class="text-lg leading-relaxed">
+                        Terwujudnya generasi yang beriman, bertakwa, berakhlak mulia, berprestasi, dan berbudaya lingkungan dengan berlandaskan nilai-nilai Islami Ahlussunnah Wal Jama'ah
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-xl p-8 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-700 to-green-500 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-bullseye text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-800">Misi</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span class="text-gray-700">Menyelenggarakan pendidikan yang berkualitas dengan mengintegrasikan nilai-nilai keislaman</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span class="text-gray-700">Membentuk siswa yang memiliki akhlakul karimah dan berbudi pekerti luhur</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span class="text-gray-700">Mengembangkan potensi akademik dan non-akademik siswa secara optimal</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span class="text-gray-700">Menciptakan lingkungan belajar yang kondusif, kreatif, dan inovatif</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                            <span class="text-gray-700">Membangun kerjasama dengan orang tua dan masyarakat dalam pendidikan</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Sekolah -->
+    <section id="program" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-4 section-title">Program Sekolah</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto">Program unggulan yang dirancang untuk mengembangkan potensi siswa secara holistik</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-700 to-green-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-quran text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Tahfidz Al-Qur'an</h3>
+                    <p class="text-gray-600 leading-relaxed">Program menghafal Al-Qur'an dengan target minimal 3 juz selama masa pendidikan, dibimbing oleh ustadz dan ustadzah berpengalaman</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-700 to-green-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-language text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Bilingual Program</h3>
+                    <p class="text-gray-600 leading-relaxed">Pembelajaran dwi bahasa (Arab-Inggris) terintegrasi dalam kegiatan sehari-hari untuk meningkatkan kemampuan komunikasi internasional</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-700 to-green-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">IT & Coding</h3>
+                    <p class="text-gray-600 leading-relaxed">Pengenalan teknologi informasi dan dasar-dasar pemrograman untuk mempersiapkan siswa di era digital</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-700 to-green-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-book-open text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Literasi & Numerasi</h3>
+                    <p class="text-gray-600 leading-relaxed">Program peningkatan kemampuan membaca, menulis, dan berhitung sebagai fondasi pembelajaran berkualitas</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-700 to-green-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Character Building</h3>
+                    <p class="text-gray-600 leading-relaxed">Pembentukan karakter melalui pembiasaan akhlak mulia, kedisiplinan, dan kepemimpinan dalam kehidupan sehari-hari</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-700 to-green-500 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-trophy text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Pembinaan Prestasi</h3>
+                    <p class="text-gray-600 leading-relaxed">Persiapan intensif untuk berbagai kompetisi akademik dan non-akademik tingkat regional hingga nasional</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ekstrakurikuler -->
+    <section id="ekskul" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-4 section-title">Ekstrakurikuler</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto">Wadah pengembangan bakat dan minat siswa di luar jam pelajaran</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center card-hover">
+                    <i class="fas fa-mosque text-green-600 text-4xl mb-4"></i>
+                    <h4 class="font-semibold text-gray-800">BTA (Baca Tulis Al-Qur'an)</h4>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center card-hover">
+                    <i class="fas fa-users text-green-600 text-4xl mb-4"></i>
+                    <h4 class="font-semibold text-gray-800">Pramuka</h4>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center card-hover">
+                    <i class="fas fa-running text-green-600 text-4xl mb-4"></i>
+                    <h4 class="font-semibold text-gray-800">Olahraga</h4>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center card-hover">
+                    <i class="fas fa-palette text-green-600 text-4xl mb-4"></i>
+                    <h4 class="font-semibold text-gray-800">Seni & Budaya</h4>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center card-hover">
+                    <i class="fas fa-drum text-green-600 text-4xl mb-4"></i>
+                    <h4 class="font-semibold text-gray-800">Hadroh</h4>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center card-hover">
+                    <i class="fas fa-microphone text-green-600 text-4xl mb-4"></i>
+                    <h4 class="font-semibold text-gray-800">Public Speaking</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fasilitas -->
+    <section id="fasilitas" class="py-20 islamic-pattern">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-4 section-title">Fasilitas Sekolah</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto">Fasilitas lengkap dan modern untuk mendukung proses pembelajaran yang optimal</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-green-600 to-green-400 flex items-center justify-center">
+                        <i class="fas fa-mosque text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Masjid Sekolah</h3>
+                        <p class="text-gray-600">Masjid dengan kapasitas 300 jamaah untuk kegiatan ibadah dan kajian keislaman</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-green-600 to-green-400 flex items-center justify-center">
+                        <i class="fas fa-book text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Perpustakaan</h3>
+                        <p class="text-gray-600">Perpustakaan dengan koleksi buku dan sumber belajar yang lengkap</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-green-600 to-green-400 flex items-center justify-center">
+                        <i class="fas fa-futbol text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Lapangan Olahraga</h3>
+                        <p class="text-gray-600">Lapangan basket, voli, dan futsal untuk mendukung kegiatan olahraga siswa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak" class="py-20 bg-gradient-to-br from-green-700 to-green-500">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-white mb-4">Hubungi Kami</h2>
+            <p class="text-center text-green-100 mb-16 max-w-2xl mx-auto">Untuk informasi lebih lanjut tentang pendaftaran atau kunjungan sekolah</p>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4 bg-white/10 backdrop-blur-lg rounded-xl p-6">
+                        <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                        </div>
+                        <div class="text-white">
+                            <h4 class="font-semibold mb-2">Alamat</h4>
+                            <p class="text-green-100">Jl. Raya Pagonan No. 123, Grabag, Magelang, Jawa Tengah 56196</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4 bg-white/10 backdrop-blur-lg rounded-xl p-6">
+                        <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-phone text-white text-xl"></i>
+                        </div>
+                        <div class="text-white">
+                            <h4 class="font-semibold mb-2">Telepon</h4>
+                            <p class="text-green-100">(0293) 123456</p>
+                            <p class="text-green-100">+62 812-3456-7890</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4 bg-white/10 backdrop-blur-lg rounded-xl p-6">
+                        <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-envelope text-white text-xl"></i>
+                        </div>
+                        <div class="text-white">
+                            <h4 class="font-semibold mb-2">Email</h4>
+                            <p class="text-green-100">info@smpmaarifgrabag.sch.id</p>
+                            <p class="text-green-100">ppdb@smpmaarifgrabag.sch.id</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4 bg-white/10 backdrop-blur-lg rounded-xl p-6">
+                        <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-clock text-white text-xl"></i>
+                        </div>
+                        <div class="text-white">
+                            <h4 class="font-semibold mb-2">Jam Operasional</h4>
+                            <p class="text-green-100">Senin - Jumat: 07.00 - 15.00 WIB</p>
+                            <p class="text-green-100">Sabtu: 07.00 - 12.00 WIB</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-2xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Kirim Pesan</h3>
+                    <form class="space-y-4" onsubmit="handleSubmit(event)">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Nama Lengkap</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition" placeholder="Masukkan nama lengkap" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition" placeholder="nama@email.com" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">No. WhatsApp</label>
+                            <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition" placeholder="08xx xxxx xxxx" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Pesan</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition resize-none" placeholder="Tulis pesan Anda..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full btn-primary text-white py-4 rounded-lg font-semibold flex items-center justify-center space-x-2">
+                            <span>Kirim Pesan</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <!-- About -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-green-400 rounded-full flex items-center justify-center">
+                            <img src="img/logo-mi.png" alt="Logo SMP Ma'arif Grabag" class="w-10 h-10 object-contain">
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold">SMP Ma'arif Grabag</h3>
+                            <p class="text-gray-400 text-sm">Berakhlak Mulia, Berprestasi</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Sekolah Menengah Pertama berbasis nilai-nilai Islam yang berkomitmen mencetak generasi berakhlak mulia, berprestasi, dan siap menghadapi tantangan masa depan dengan landasan iman dan taqwa.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-green-600 hover:bg-green-500 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-green-600 hover:bg-green-500 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-green-600 hover:bg-green-500 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-green-600 hover:bg-green-500 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Menu Cepat</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#beranda" class="text-gray-400 hover:text-green-400 transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Beranda</a></li>
+                        <li><a href="#profil" class="text-gray-400 hover:text-green-400 transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Profil Sekolah</a></li>
+                        <li><a href="#program" class="text-gray-400 hover:text-green-400 transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Program</a></li>
+                        <li><a href="#ekskul" class="text-gray-400 hover:text-green-400 transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Ekstrakurikuler</a></li>
+                        <li><a href="#fasilitas" class="text-gray-400 hover:text-green-400 transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Fasilitas</a></li>
+                        <li><a href="#kontak" class="text-gray-400 hover:text-green-400 transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2"></i> Kontak</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Kontak</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-green-500 mr-3 mt-1"></i>
+                            <span class="text-sm">Jl. Raya Grabag No. 123, Grabag, Magelang, Jawa Tengah</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-green-500 mr-3"></i>
+                            <span class="text-sm">(0293) 123456</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-green-500 mr-3"></i>
+                            <span class="text-sm">info@smpmaarifgrabag.sch.id</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock text-green-500 mr-3"></i>
+                            <span class="text-sm">Senin - Sabtu: 07.00 - 15.00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 pt-8 mt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-gray-400 text-sm text-center md:text-left">
+                        &copy; 2025 SMP Ma'arif Grabag. All Rights Reserved.
+                    </p>
+                    <div class="flex items-center space-x-6 text-sm text-gray-400">
+                        <a href="#" class="hover:text-green-400 transition">Kebijakan Privasi</a>
+                        <span>|</span>
+                        <a href="#" class="hover:text-green-400 transition">Syarat & Ketentuan</a>
+                        <span>|</span>
+                        <a href="#" class="hover:text-green-400 transition">PPDB Online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Handle form submit
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Terima kasih! Pesan Anda telah dikirim. Kami akan segera menghubungi Anda.');
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
