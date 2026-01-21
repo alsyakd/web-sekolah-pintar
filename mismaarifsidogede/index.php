@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MIS Sidogede Grabag</title>
     <meta name="keywords" content="MIS Sidogede, Madrasah Ibtidaiyah, Sekolah Islam Grabag, Pendidikan Dasar Islam" />
-    <meta name="description" content="MIS Sidogede Grabag: Menanamkan nilai Al-Qur'an sejak dini, membentuk generasi sholeh, cerdas, dan berkontribusi untuk bangsa." />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <meta name="description"
+        content="MIS Sidogede Grabag: Menanamkan nilai Al-Qur'an sejak dini, membentuk generasi sholeh, cerdas, dan berkontribusi untuk bangsa." />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
         :root {
@@ -55,7 +58,7 @@
 
         header.scrolled {
             background: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
         }
 
         nav {
@@ -143,8 +146,8 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                        url("https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&q=80");
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url("https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&q=80");
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -185,7 +188,7 @@
         .btn:hover {
             background: transparent;
             transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
         }
 
         /* Section Umum */
@@ -240,7 +243,7 @@
         .about-img {
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         }
 
         .about-img img {
@@ -265,7 +268,7 @@
             background: white;
             padding: 30px;
             border-radius: 16px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
             flex: 1;
             min-width: 300px;
             transition: all 0.3s ease;
@@ -273,7 +276,7 @@
 
         .vm-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .vm-card h3 {
@@ -285,7 +288,8 @@
             font-size: 1.4rem;
         }
 
-        .vm-card p, .vm-card ul {
+        .vm-card p,
+        .vm-card ul {
             color: var(--gray);
             font-size: 1rem;
         }
@@ -312,13 +316,13 @@
             padding: 30px 20px;
             border-radius: 16px;
             background: white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
         }
 
         .feature-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
         }
 
         .feature-icon {
@@ -348,14 +352,14 @@
         .gallery-card {
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease;
             background: white;
         }
 
         .gallery-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
         }
 
         .gallery-card img {
@@ -380,8 +384,8 @@
 
         /* Kontak */
         #contact {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url("assets/img/bg_header.png");
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url("assets/img/bg_header.png");
             background-size: cover;
             background-position: center;
             color: white;
@@ -408,7 +412,7 @@
             margin-bottom: 15px;
             border: none;
             border-radius: 10px;
-            background: rgba(255,255,255,0.9);
+            background: rgba(255, 255, 255, 0.9);
             font-size: 1rem;
         }
 
@@ -418,7 +422,7 @@
         }
 
         .contact-info-box {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             padding: 25px;
             border-radius: 16px;
             backdrop-filter: blur(5px);
@@ -455,62 +459,62 @@
         }
 
         .absensi-container {
-        max-width: 950px;
-        margin: 0 auto;
-        background: white;
-        padding: 30px;
-        border-radius: 18px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
+            max-width: 950px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
         }
 
         .absensi-gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 16px;
-        width: 100%;
-        max-width: 700px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            width: 100%;
+            max-width: 700px;
         }
 
         .absensi-img-wrapper {
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .absensi-img-wrapper img {
-        width: 100%;
-        height: auto;
-        display: block;
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         .absensi-desc {
-        text-align: center;
-        font-size: 1.05rem;
-        color: var(--text-dark);
-        max-width: 600px;
-        margin: 0;
+            text-align: center;
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            max-width: 600px;
+            margin: 0;
         }
 
         .btn-absensi {
-        background: var(--secondary);
-        color: white;
-        font-weight: 600;
-        padding: 14px 40px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
-        display: inline-block;
+            background: var(--secondary);
+            color: white;
+            font-weight: 600;
+            padding: 14px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
+            display: inline-block;
         }
 
         .btn-absensi:hover {
-        transform: scale(1.03);
-        box-shadow: 0 6px 20px rgba(39, 174, 96, 0.6);
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.6);
         }
 
         /* Footer */
@@ -524,11 +528,12 @@
 
         /* Responsive */
         @media (max-width: 992px) {
+
             .about-grid,
             .contact-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .about-img {
                 order: -1;
             }
@@ -538,22 +543,69 @@
             nav ul {
                 display: none;
             }
+
             .menu-toggle {
                 display: flex;
             }
+
             h2 {
                 font-size: 1.8rem;
             }
         }
+
+        /* Tambahkan di media query untuk mobile menu */
+        @media (max-width: 768px) {
+            nav ul {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                transition: 0.4s ease;
+                z-index: 999;
+            }
+
+            nav ul.active {
+                right: 0;
+            }
+
+            nav ul li a {
+                color: var(--dark);
+                font-size: 1.1rem;
+            }
+
+            header.scrolled nav ul li a {
+                color: var(--dark);
+            }
+
+            .menu-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+        }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header id="navbar">
         <div class="container">
             <nav>
                 <a href="#home" class="logo">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,10 90,35 90,75 50,95 10,75 10,35' fill='%231e8449' stroke='%23fff' stroke-width='2'/%3E%3Ctext x='50' y='60' font-family='Arial' font-size='40' font-weight='bold' text-anchor='middle' fill='%23fff'%3EMIS%3C/text%3E%3C/svg%3E" alt="Logo MIS Sidogede Grabag" />
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,10 90,35 90,75 50,95 10,75 10,35' fill='%231e8449' stroke='%23fff' stroke-width='2'/%3E%3Ctext x='50' y='60' font-family='Arial' font-size='40' font-weight='bold' text-anchor='middle' fill='%23fff'%3EMIS%3C/text%3E%3C/svg%3E"
+                        alt="Logo MIS Sidogede Grabag" />
                     <span>MIS SIDOGEDE</span>
                 </a>
                 <ul>
@@ -562,6 +614,7 @@
                     <li><a href="#visi-misi">Visi & Misi</a></li>
                     <li><a href="#keunggulan">Keunggulan</a></li>
                     <li><a href="#galeri">Galeri</a></li>
+                    <li><a href="#absensi">Absensi Digital</a></li>
                     <li><a href="#contact">Kontak</a></li>
                 </ul>
                 <div class="menu-toggle">
@@ -578,7 +631,8 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Menanamkan Nilai Qur’ani, Membentuk Generasi Emas</h1>
-                <p>MIS Sidogede Grabag hadir sebagai wadah pendidikan dasar yang menggabungkan kecerdasan intelektual, spiritual, dan karakter islami sejak usia dini.</p>
+                <p>MIS Sidogede Grabag hadir sebagai wadah pendidikan dasar yang menggabungkan kecerdasan intelektual,
+                    spiritual, dan karakter islami sejak usia dini.</p>
                 <a href="#contact" class="btn">Daftar Sekarang</a>
             </div>
         </div>
@@ -591,12 +645,17 @@
             <div class="about-grid">
                 <div class="about-text">
                     <h3>Madrasah Ibtidaiyah Swasta Sidogede</h3>
-                    <p>Berdiri sejak tahun 2005, MIS Sidogede Grabag telah menjadi pilihan utama orang tua di wilayah Magelang bagian utara yang menginginkan pendidikan dasar berbasis nilai-nilai Islam.</p>
-                    <p>Kami percaya bahwa fondasi pendidikan yang kuat dimulai dari lingkungan yang penuh kasih, disiplin, dan keteladanan. Di sini, setiap anak didik tidak hanya belajar membaca dan berhitung, tetapi juga belajar menjadi pribadi yang jujur, tanggung jawab, dan peduli.</p>
-                    <p>Dengan kurikulum Kemenag yang diperkaya oleh program tahfidz, akhlak harian, dan pembiasaan ibadah, kami siap menyiapkan generasi masa depan yang unggul di dunia dan akhirat.</p>
+                    <p>Berdiri sejak tahun 2005, MIS Sidogede Grabag telah menjadi pilihan utama orang tua di wilayah
+                        Magelang bagian utara yang menginginkan pendidikan dasar berbasis nilai-nilai Islam.</p>
+                    <p>Kami percaya bahwa fondasi pendidikan yang kuat dimulai dari lingkungan yang penuh kasih,
+                        disiplin, dan keteladanan. Di sini, setiap anak didik tidak hanya belajar membaca dan berhitung,
+                        tetapi juga belajar menjadi pribadi yang jujur, tanggung jawab, dan peduli.</p>
+                    <p>Dengan kurikulum Kemenag yang diperkaya oleh program tahfidz, akhlak harian, dan pembiasaan
+                        ibadah, kami siap menyiapkan generasi masa depan yang unggul di dunia dan akhirat.</p>
                 </div>
                 <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80" alt="Kampus MIS Sidogede Grabag" />
+                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80"
+                        alt="Kampus MIS Sidogede Grabag" />
                     <div class="img-caption">Kampus MIS Sidogede Grabag</div>
                 </div>
             </div>
@@ -610,7 +669,8 @@
             <div class="vm-cards">
                 <div class="vm-card">
                     <h3><i class="fas fa-eye"></i> Visi</h3>
-                    <p>Menjadi madrasah unggulan yang melahirkan generasi Qur’ani, berprestasi, berakhlak mulia, dan berwawasan global.</p>
+                    <p>Menjadi madrasah unggulan yang melahirkan generasi Qur’ani, berprestasi, berakhlak mulia, dan
+                        berwawasan global.</p>
                 </div>
                 <div class="vm-card">
                     <h3><i class="fas fa-bullseye"></i> Misi</h3>
@@ -661,19 +721,23 @@
             <h2>Dokumentasi Kegiatan</h2>
             <div class="gallery-cards">
                 <div class="gallery-card">
-                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="Belajar Bersama" />
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80"
+                        alt="Belajar Bersama" />
                     <div class="card-caption">Belajar Bersama</div>
                 </div>
                 <div class="gallery-card">
-                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80" alt="MTQ Anak-Anak" />
+                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80"
+                        alt="MTQ Anak-Anak" />
                     <div class="card-caption">MTQ Anak-Anak</div>
                 </div>
                 <div class="gallery-card">
-                    <img src="https://images.pexels.com/photos/3875190/pexels-photo-3875190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Pramuka" />
+                    <img src="https://images.pexels.com/photos/3875190/pexels-photo-3875190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Pramuka" />
                     <div class="card-caption">Pramuka</div>
                 </div>
                 <div class="gallery-card">
-                    <img src="https://images.pexels.com/photos/6984310/pexels-photo-6984310.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Lomba Kaligrafi" />
+                    <img src="https://images.pexels.com/photos/6984310/pexels-photo-6984310.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Lomba Kaligrafi" />
                     <div class="card-caption">Lomba Kaligrafi</div>
                 </div>
             </div>
@@ -689,26 +753,22 @@
             </div>
             <div class="absensi-container">
                 <div class="absensi-gallery">
-                <div class="absensi-img-wrapper">
-                    <img src="assets/absen1.jpeg" alt="Tampilan Absensi Siswa - Halaman Login" />
-                </div>
-                <div class="absensi-img-wrapper">
-                    <img src="assets/absen2.jpeg" alt="Tampilan Absensi Siswa - Daftar Kehadiran" />
-                </div>
-                <div class="absensi-img-wrapper">
-                    <img src="assets/absen3.jpeg" alt="Tampilan Absensi Orang Tua - Laporan Bulanan" />
-                </div>
+                    <div class="absensi-img-wrapper">
+                        <img src="assets/absen1.jpeg" alt="Tampilan Absensi Siswa - Halaman Login" />
+                    </div>
+                    <div class="absensi-img-wrapper">
+                        <img src="assets/absen2.jpeg" alt="Tampilan Absensi Siswa - Daftar Kehadiran" />
+                    </div>
+                    <div class="absensi-img-wrapper">
+                        <img src="assets/absen3.jpeg" alt="Tampilan Absensi Orang Tua - Laporan Bulanan" />
+                    </div>
                 </div>
                 <p class="absensi-desc">
-                Pantau kehadiran putra-putri Anda secara real-time melalui sistem absensi digital berbasis web.
+                    Pantau kehadiran putra-putri Anda secara real-time melalui sistem absensi digital berbasis web.
                 </p>
-                <a
-                href="https://sekolahpintar.my/smpislamsarbini/presensi/  "
-                target="_blank"
-                rel="noopener"
-                class="btn-absensi"
-                >
-                Buka Aplikasi Absensi
+                <a href="https://sekolahpintar.my/smpislamsarbini/presensi/  " target="_blank" rel="noopener"
+                    class="btn-absensi">
+                    Buka Aplikasi Absensi
                 </a>
             </div>
         </div>
@@ -726,7 +786,8 @@
                     <button type="submit" class="submit-btn">Kirim Pesan</button>
                 </form>
                 <div class="contact-info-box">
-                    <p><i class="fas fa-map-marker-alt"></i> Dusun Sidogede, Desa Grabag, Kec. Grabag, Kab. Magelang, Jawa Tengah</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Dusun Sidogede, Desa Grabag, Kec. Grabag, Kab. Magelang,
+                        Jawa Tengah</p>
                     <p><i class="fas fa-phone"></i> (0293) XXX-XXXX</p>
                     <p><i class="fas fa-envelope"></i> info@missetiodege.sch.id</p>
                     <p><i class="fas fa-clock"></i> Senin–Jumat • 07.00–14.00 WIB</p>
@@ -750,13 +811,54 @@
 
         // Smooth scroll & active link
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
             });
         });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+
+        // Active link on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav ul li a');
+
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
+
 </html>

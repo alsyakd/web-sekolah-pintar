@@ -163,6 +163,26 @@
             background: var(--primary);
         }
 
+        @media (max-width: 900px) {
+            nav ul {
+                gap: 15px;
+            }
+            
+            nav ul li a {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 25px;
+            }
+            
+            nav ul li a {
+                font-size: 1.1rem;
+            }
+        }
+
         @media (max-width: 768px) {
             nav ul {
                 position: fixed;
@@ -612,6 +632,7 @@
                 <li><a href="#visi-misi">Visi & Misi</a></li>
                 <li><a href="#keunggulan">Keunggulan</a></li>
                 <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#absensi">Absensi Digital</a></li>
                 <li><a href="#contact">Kontak</a></li>
             </ul>
             <div class="menu-toggle" id="menuToggle">
