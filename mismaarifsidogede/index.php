@@ -766,7 +766,7 @@
                 <p class="absensi-desc">
                     Pantau kehadiran putra-putri Anda secara real-time melalui sistem absensi digital berbasis web.
                 </p>
-                <a href="https://sekolahpintar.my/smpislamsarbini/presensi/  " target="_blank" rel="noopener"
+                <a href="https://sekolahpintar.my/missidogede/presensi/  " target="_blank" rel="noopener"
                     class="btn-absensi">
                     Buka Aplikasi Absensi
                 </a>
