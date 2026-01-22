@@ -131,6 +131,43 @@
             color: var(--accent) !important;
         }
 
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Links inside dropdown */
+        .dropdown-content li {
+            float: none;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         header.scrolled nav ul li a {
             color: var(--dark);
         }
@@ -752,7 +789,14 @@
                 <li><a href="#visi-misi">Visi & Misi</a></li>
                 <li><a href="#keunggulan">Keunggulan</a></li>
                 <li><a href="#galeri">Galeri</a></li>
-                <li><a href="#absensi">Absensi Digital</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Digitalisasi ▼</a>
+                    <ul class="dropdown-content">
+                    <li><a href="#absensi">Absensi Digital</a></li>
+                    <li><a href="#elearning">E-Learning</a></li>
+                    <li><a href="#bell-iot">Bell Otomatis</a></li>
+                    </ul>
+                </li>
                 <li><a href="#contact">Kontak</a></li>
             </ul>
             <div class="menu-toggle" id="menuToggle">
@@ -950,24 +994,21 @@
         <div class="bell-container">
           <div class="bell-gallery">
             <div class="bell-img-wrapper">
-              <img src="assets/img/bell1.jpeg" alt="Antarmuka Pengaturan Jadwal Bell" />
+              <img src="assets/bel1.jpeg" alt="Antarmuka Pengaturan Jadwal Bell" />
             </div>
             <div class="bell-img-wrapper">
-              <img src="assets/img/bell2.jpeg" alt="Perangkat IoT Bell Sekolah" />
+              <img src="assets/bel2.jpeg" alt="Fitur Jadwal Bell" />
             </div>
-          </div>
-          <p class="bell-desc">
-            Sistem bell otomatis berbasis IoT yang akurat, fleksibel, dan dapat dikendalikan dari mana saja.
-          </p>
-          <a
-            href="https://sekolahpintar.my/smpislamsarbini/bell/"
-            target="_blank"
-            rel="noopener"
-            class="btn-bell"
-          >
-            Lihat Demo Bell IoT
-          </a>
+            <div class="bell-img-wrapper">
+                <img src="assets/bel3.jpeg" alt="Perangkat IoT Bell Sekolah" />
+            </div>
         </div>
+            <p class="bell-desc">
+            Sistem bell otomatis berbasis IoT yang akurat, fleksibel, dan dapat dikendalikan dari mana saja.
+            </p>
+        <a href="https://sekolahpintar.my/bel" target="_blank" rel="noopener" class="btn-bell">
+            Lihat Demo Bell IoT
+        </a>
       </div>
     </section>
 
