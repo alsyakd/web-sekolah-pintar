@@ -51,6 +51,43 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
 
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Links inside dropdown */
+        .dropdown-content li {
+            float: none;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         .islamic-pattern {
             background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><g fill="%23228B22" opacity="0.05"><path d="M0 0h40v40H0zM40 40h40v40H40z"/></g></svg>');
         }
@@ -169,7 +206,14 @@
                     <a href="#program" class="text-gray-700 hover:text-green-600 transition font-medium">Program</a>
                     <a href="#ekskul" class="text-gray-700 hover:text-green-600 transition font-medium">Ekstrakurikuler</a>
                     <a href="#fasilitas" class="text-gray-700 hover:text-green-600 transition font-medium">Fasilitas</a>
-                    <a href="#absensi" class="text-gray-700 hover:text-green-600 transition font-medium">Absensi Digital</a>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Digitalisasi ▼</a>
+                        <ul class="dropdown-content">
+                        <li><a href="#absensi">Absensi Digital</a></li>
+                        <li><a href="#elearning">E-Learning</a></li>
+                        <li><a href="#bell-iot">Bell Otomatis</a></li>
+                        </ul>
+                    </li>
                     <a href="#kontak" class="text-gray-700 hover:text-green-600 transition font-medium">Kontak</a>
                 </div>
 
@@ -565,40 +609,49 @@
     </section>
 
     <!-- BELL SEKOLAH IOT PREVIEW -->
-    <section id="bell-iot" class="py-16 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-green-900 mb-2">Bell Sekolah Otomatis (IoT)</h2>
-        <div class="w-12 h-1 bg-green-500 mx-auto rounded-full"></div>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 max-w-4xl mx-auto flex flex-col items-center gap-8">
-        <!-- Gallery Images -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
-            <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-            <img src="assets/img/bell1.jpeg" alt="Antarmuka Pengaturan Jadwal Bell" class="w-full h-auto object-cover" />
+    <section id="absensi" class="py-20 bg-gradient-to-br from-green-50 to-emerald-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-4 section-title">Bell Sekolah Otomatis (IoT)</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto">Sistem bell otomatis berbasis IoT yang akurat, fleksibel, dan dapat dikendalikan dari mana saja.</p>
+            
+            <div class="absensi-container max-w-6xl mx-auto p-8 md:p-12">
+                <div class="grid md:grid-cols-3 gap-6 mb-10">
+                    <div class="absensi-card">
+                        <div class="h-48 bg-gradient-to-br from-green-100 to-emerald-100 flex items-center justify-center">
+                            <img src="img/bel1.jpeg" alt="Halaman Login Absensi" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    
+                    <div class="absensi-card">
+                        <div class="h-48 bg-gradient-to-br from-green-100 to-emerald-100 flex items-center justify-center">
+                            <img src="img/bel2.jpeg" alt="Dashboard Absensi" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    
+                    <div class="absensi-card">
+                        <div class="h-48 bg-gradient-to-br from-green-100 to-emerald-100 flex items-center justify-center">
+                            <img src="img/bel3.jpeg" alt="Laporan Orang Tua" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bagian tombol di tengah -->
+                <div class="text-center">
+                    <div class="space-y-6 max-w-2xl mx-auto">
+                        <p class="text-gray-700 text-lg">
+                            Sistem bell otomatis kami memudahkan pengelolaan jadwal pelajaran secara real-time, akurat, dan dapat dikendalikan dari mana saja.
+                        </p>
+                        <a href="https://sekolahpintar.my/smpmaarifgrabag/presensi/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="btn-absensi text-white px-10 py-4 rounded-full font-semibold inline-flex items-center justify-center space-x-3 mx-auto">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Akses Sistem Bell Sekolah Otomatis</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-            <img src="assets/img/bell2.jpeg" alt="Perangkat IoT Bell Sekolah" class="w-full h-auto object-cover" />
-            </div>
         </div>
-
-        <!-- Description -->
-        <p class="text-center text-lg text-gray-700 max-w-md">
-            Sistem bell otomatis berbasis IoT yang akurat, fleksibel, dan dapat dikendalikan dari mana saja.
-        </p>
-
-        <!-- Button -->
-        <a
-            href="https://sekolahpintar.my/smpislamsarbini/bell/"
-            target="_blank"
-            rel="noopener"
-            class="btn-absensi text-white px-10 py-4 rounded-full font-semibold inline-flex items-center justify-center space-x-3 mx-auto"
-        >
-            Lihat Demo Bell IoT
-        </a>
-        </div>
-    </div>
     </section>
 
     <!-- Kontak -->

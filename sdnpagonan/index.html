@@ -55,6 +55,43 @@
             margin: 0 auto;
         }
 
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Links inside dropdown */
+        .dropdown-content li {
+            float: none;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         .logo {
             display: flex;
             align-items: center;
@@ -826,7 +863,14 @@
                 <li><a href="#profil" class="nav-link">Profil</a></li>
                 <li><a href="#visi-misi" class="nav-link">Visi & Misi</a></li>
                 <li><a href="#fasilitas" class="nav-link">Fasilitas</a></li>
-                <li><a href="#absensi" class="nav-link">Absensi Digital</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Digitalisasi ▼</a>
+                    <ul class="dropdown-content">
+                    <li><a href="#absensi">Absensi Digital</a></li>
+                    <li><a href="#elearning">E-Learning</a></li>
+                    <li><a href="#bell-iot">Bell Otomatis</a></li>
+                    </ul>
+                </li>
                 <li><a href="#kontak" class="nav-link">Kontak</a></li>
             </ul>
         </div>
@@ -971,35 +1015,32 @@
     </section>
 
     <!-- BELL SEKOLAH IOT PREVIEW -->
-    <section id="bell-iot" class="section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Bell Sekolah Otomatis (IoT)</h2>
-          <div></div>
-        </div>
-        <div class="bell-container">
-          <div class="bell-gallery">
-            <div class="bell-img-wrapper">
-              <img src="assets/img/bell1.jpeg" alt="Antarmuka Pengaturan Jadwal Bell" />
+    <section id="bell-iot" class="section bg-light reveal">
+        <div class="container">
+            <div class="section-title">
+                <h2>Bell Sekolah Otomatis (IoT)</h2>
             </div>
-            <div class="bell-img-wrapper">
-              <img src="assets/img/bell2.jpeg" alt="Perangkat IoT Bell Sekolah" />
+            <div class="bell-container">
+                <div class="bell-gallery">
+                    <div class="bell-img-wrapper">
+                        <img src="img/bel1.jpeg" alt="Antarmuka Pengaturan Jadwal Bell" />
+                    </div>
+                    <div class="bell-img-wrapper">
+                        <img src="img/bel2.jpeg" alt="Fitur Jadwal Bell" />
+                    </div>
+                    <div class="bell-img-wrapper">
+                        <img src="img/bel3.jpeg" alt="Perangkat IoT Bell Sekolah" />
+                    </div>
+                </div>
+                <p class="bell-desc">
+                    Sistem bell otomatis berbasis IoT yang akurat, fleksibel, dan dapat dikendalikan dari mana saja untuk menunjang kegiatan belajar mengajar yang lebih teratur.
+                </p>
+                <a href="https://sekolahpintar.my/bel" target="_blank" rel="noopener" class="btn-bell">
+                    Lihat Demo Bell IoT
+                </a>
             </div>
-          </div>
-          <p class="bell-desc">
-            Sistem bell otomatis berbasis IoT yang akurat, fleksibel, dan dapat dikendalikan dari mana saja.
-          </p>
-          <a
-            href="https://sekolahpintar.my/smpislamsarbini/bell/"
-            target="_blank"
-            rel="noopener"
-            class="btn-bell"
-          >
-            Lihat Demo Bell IoT
-          </a>
         </div>
-      </div>
-    </section>    
+    </section> 
 
     <!-- Kontak & Lokasi -->
     <section id="kontak">

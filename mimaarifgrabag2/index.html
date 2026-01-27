@@ -67,6 +67,43 @@
       width: 100%;
     }
 
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    /* Links inside dropdown */
+    .dropdown-content li {
+      float: none;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Show dropdown on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
     .section-title {
       position: relative;
       display: inline-block;
@@ -138,10 +175,14 @@
             Fasilitas
             <span class="absolute left-0 bottom-[-6px] w-0 h-0.5 bg-green-600 transition-all duration-400 group-hover:w-full"></span>
           </a>
-          <a href="#absensi" class="nav-link relative text-gray-700 hover:text-green-700 font-medium transition-colors duration-300">
-            Absensi Digital
-            <span class="absolute left-0 bottom-[-6px] w-0 h-0.5 bg-green-600 transition-all duration-400 group-hover:w-full"></span>
-          </a>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Digitalisasi </a>
+            <ul class="dropdown-content">
+            <li><a href="#absensi">Absensi Digital</a></li>
+            <li><a href="#elearning">E-Learning</a></li>
+            <li><a href="#bell-iot">Bell Otomatis</a></li>
+            </ul>
+          </li>
           <a href="#kontak" class="nav-link relative text-gray-700 hover:text-green-700 font-medium transition-colors duration-300">
             Kontak
             <span class="absolute left-0 bottom-[-6px] w-0 h-0.5 bg-green-600 transition-all duration-400 group-hover:w-full"></span>
@@ -161,7 +202,14 @@
         <a href="#beranda" class="block py-3 px-4 text-gray-700 hover:bg-green-50 hover:text-green-700 rounded-lg transition-all duration-300">Beranda</a>
         <a href="#galeri" class="block py-3 px-4 text-gray-700 hover:bg-green-50 hover:text-green-700 rounded-lg transition-all duration-300">Galeri</a>
         <a href="#fasilitas" class="block py-3 px-4 text-gray-700 hover:bg-green-50 hover:text-green-700 rounded-lg transition-all duration-300">Fasilitas</a>
-        <a href="#absensi" class="block py-3 px-4 text-gray-700 hover:bg-green-50 hover:text-green-700 rounded-lg transition-all duration-300">Absensi Digital</a>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Digitalisasi </a>
+            <ul class="dropdown-content">
+            <li><a href="#absensi">Absensi Digital</a></li>
+            <li><a href="#elearning">E-Learning</a></li>
+            <li><a href="#bell-iot">Bell Otomatis</a></li>
+            </ul>
+        </li>
         <a href="#kontak" class="block py-3 px-4 text-gray-700 hover:bg-green-50 hover:text-green-700 rounded-lg transition-all duration-300">Kontak</a>
       </div>
     </div>
@@ -533,12 +581,15 @@
 
         <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 max-w-4xl mx-auto flex flex-col items-center gap-8">
         <!-- Gallery Images -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
             <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-            <img src="assets/img/bell1.jpeg" alt="Antarmuka Pengaturan Jadwal Bell" class="w-full h-auto object-cover" />
+            <img src="assets/img/bel1.jpeg" alt="Antarmuka Pengaturan Jadwal Bell" class="w-full h-auto object-cover" />
             </div>
             <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-            <img src="assets/img/bell2.jpeg" alt="Perangkat IoT Bell Sekolah" class="w-full h-auto object-cover" />
+            <img src="assets/img/bel2.jpeg" alt="Perangkat IoT Bell Sekolah" class="w-full h-auto object-cover" />
+            </div>
+            <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/img/bel3.jpeg" alt="Perangkat IoT Bell Sekolah" class="w-full h-auto object-cover" />
             </div>
         </div>
 
