@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MI Ma'arif 1 Grabag</title>
     <meta name="keywords" content="MI Ma'arif Grabag, Madrasah Ibtidaiyah, Sekolah Islam, Pendidikan Dasar Islam" />
     <link rel="icon" href="assets/img/logo-mi-maarif.png" type="image/png" />
-    <meta name="description" content="Website resmi MI Ma'arif 1 Grabag - Membentuk Generasi Islami yang Cerdas, Berkarakter, dan Berprestasi" />
+    <meta name="description"
+        content="Website resmi MI Ma'arif 1 Grabag - Membentuk Generasi Islami yang Cerdas, Berkarakter, dan Berprestasi" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <style>
@@ -142,7 +144,7 @@
             position: absolute;
             background-color: #f9f9f9;
             min-width: 180px;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1;
         }
 
@@ -204,7 +206,7 @@
             nav ul {
                 gap: 15px;
             }
-            
+
             nav ul li a {
                 font-size: 0.9rem;
             }
@@ -214,7 +216,7 @@
             nav ul {
                 gap: 25px;
             }
-            
+
             nav ul li a {
                 font-size: 1.1rem;
             }
@@ -508,187 +510,187 @@
         }
 
         .absensi-container {
-        max-width: 950px;
-        margin: 0 auto;
-        background: white;
-        padding: 30px;
-        border-radius: 18px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
+            max-width: 950px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
         }
 
         .absensi-gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 16px;
-        width: 100%;
-        max-width: 700px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            width: 100%;
+            max-width: 700px;
         }
 
         .absensi-img-wrapper {
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .absensi-img-wrapper img {
-        width: 100%;
-        height: auto;
-        display: block;
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         .absensi-desc {
-        text-align: center;
-        font-size: 1.05rem;
-        color: var(--text-dark);
-        max-width: 600px;
-        margin: 0;
+            text-align: center;
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            max-width: 600px;
+            margin: 0;
         }
 
         .btn-absensi {
-        background: var(--secondary);
-        color: white;
-        font-weight: 600;
-        padding: 14px 40px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
-        display: inline-block;
+            background: var(--secondary);
+            color: white;
+            font-weight: 600;
+            padding: 14px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
+            display: inline-block;
         }
 
         .btn-absensi:hover {
-        transform: scale(1.03);
-        box-shadow: 0 6px 20px rgba(39, 174, 96, 0.6);
-        } 
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.6);
+        }
 
         /* === E-LEARNING === */
         .elearning-container {
-        max-width: 950px;
-        margin: 0 auto;
-        background: white;
-        padding: 30px;
-        border-radius: 18px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
+            max-width: 950px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
         }
 
         .elearning-gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 16px;
-        width: 100%;
-        max-width: 700px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            width: 100%;
+            max-width: 700px;
         }
 
         .elearning-img-wrapper {
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .elearning-img-wrapper img {
-        width: 100%;
-        height: auto;
-        display: block;
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         .elearning-desc {
-        text-align: center;
-        font-size: 1.05rem;
-        color: var(--text-dark);
-        max-width: 600px;
-        margin: 0;
+            text-align: center;
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            max-width: 600px;
+            margin: 0;
         }
 
         .btn-elearning {
-        background: var(--secondary);
-        color: white;
-        font-weight: 600;
-        padding: 14px 40px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
-        display: inline-block;
+            background: var(--secondary);
+            color: white;
+            font-weight: 600;
+            padding: 14px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
+            display: inline-block;
         }
 
         .btn-elearning:hover {
-        transform: scale(1.03);
-        box-shadow: 0 6px 20px rgba(39, 174, 96, 0.6);
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.6);
         }
 
         /* === BELL SEKOLAH IOT === */
         .bell-container {
-        max-width: 950px;
-        margin: 0 auto;
-        background: white;
-        padding: 30px;
-        border-radius: 18px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
+            max-width: 950px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
         }
 
         .bell-gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 16px;
-        width: 100%;
-        max-width: 700px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            width: 100%;
+            max-width: 700px;
         }
 
         .bell-img-wrapper {
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .bell-img-wrapper img {
-        width: 100%;
-        height: auto;
-        display: block;
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         .bell-desc {
-        text-align: center;
-        font-size: 1.05rem;
-        color: var(--text-dark);
-        max-width: 600px;
-        margin: 0;
+            text-align: center;
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            max-width: 600px;
+            margin: 0;
         }
 
         .btn-bell {
-        background: var(--secondary);
-        color: white;
-        font-weight: 600;
-        padding: 14px 40px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
-        display: inline-block;
+            background: var(--secondary);
+            color: white;
+            font-weight: 600;
+            padding: 14px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
+            display: inline-block;
         }
 
         .btn-bell:hover {
-        transform: scale(1.03);
-        box-shadow: 0 6px 20px rgba(39, 174, 96, 0.6);
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.6);
         }
 
         #contact {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url("assets/bg_header.png");
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url("assets/bg_header.png");
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -776,6 +778,7 @@
         }
     </style>
 </head>
+
 <body>
     <header id="navbar">
         <nav>
@@ -792,9 +795,9 @@
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropbtn">Digitalisasi ▼</a>
                     <ul class="dropdown-content">
-                    <li><a href="#absensi">Absensi Digital</a></li>
-                    <li><a href="#elearning">E-Learning</a></li>
-                    <li><a href="#bell-iot">Bell Otomatis</a></li>
+                        <li><a href="#absensi">Absensi Digital</a></li>
+                        <li><a href="#elearning">E-Learning</a></li>
+                        <li><a href="#bell-iot">Bell Otomatis</a></li>
                     </ul>
                 </li>
                 <li><a href="#contact">Kontak</a></li>
@@ -810,7 +813,8 @@
     <section id="home">
         <div class="container">
             <h1>Membentuk Generasi Islami<br />Cerdas & Berkarakter</h1>
-            <p>Pendidikan dasar Islam yang mengintegrasikan nilai-nilai keislaman dengan pembelajaran berkualitas untuk membentuk generasi yang berakhlak mulia dan berprestasi</p>
+            <p>Pendidikan dasar Islam yang mengintegrasikan nilai-nilai keislaman dengan pembelajaran berkualitas untuk
+                membentuk generasi yang berakhlak mulia dan berprestasi</p>
             <div class="hero-btns">
                 <a href="#contact" class="btn btn-primary">Daftar Sekarang</a>
                 <a href="#about" class="btn btn-outline">Selengkapnya</a>
@@ -825,9 +829,14 @@
             </div>
             <div>
                 <h2>Tentang MI Ma'arif 1 Grabag</h2>
-                <p>Madrasah Ibtidaiyah Ma'arif 1 Grabag adalah lembaga pendidikan tingkat dasar yang bernaung di bawah Kementerian Agama RI. Kami berkomitmen memberikan pendidikan berkualitas yang mengintegrasikan ilmu pengetahuan umum dengan nilai-nilai keislaman.</p>
-                <p>Dengan tenaga pendidik yang berpengalaman dan berdedikasi tinggi, serta fasilitas pembelajaran yang memadai, kami menciptakan lingkungan belajar yang kondusif untuk mengembangkan potensi peserta didik secara optimal.</p>
-                <p>Kami percaya bahwa setiap anak memiliki potensi unik yang perlu dikembangkan melalui pendidikan holistik yang mencakup aspek spiritual, intelektual, emosional, dan sosial.</p>
+                <p>Madrasah Ibtidaiyah Ma'arif 1 Grabag adalah lembaga pendidikan tingkat dasar yang bernaung di bawah
+                    Kementerian Agama RI. Kami berkomitmen memberikan pendidikan berkualitas yang mengintegrasikan ilmu
+                    pengetahuan umum dengan nilai-nilai keislaman.</p>
+                <p>Dengan tenaga pendidik yang berpengalaman dan berdedikasi tinggi, serta fasilitas pembelajaran yang
+                    memadai, kami menciptakan lingkungan belajar yang kondusif untuk mengembangkan potensi peserta didik
+                    secara optimal.</p>
+                <p>Kami percaya bahwa setiap anak memiliki potensi unik yang perlu dikembangkan melalui pendidikan
+                    holistik yang mencakup aspek spiritual, intelektual, emosional, dan sosial.</p>
             </div>
         </div>
     </section>
@@ -839,7 +848,8 @@
                 <div class="vm-card">
                     <h3><i class="fas fa-eye"></i> Visi</h3>
                     <p style="color: var(--gray); line-height: 1.8; font-size: 1.05rem;">
-                        Menjadikan MI Ma'arif 1 Grabag sebagai lembaga pendidikan Islam yang unggul dalam prestasi akademik dan non-akademik, berakhlakul karimah, serta berbudaya lingkungan.
+                        Menjadikan MI Ma'arif 1 Grabag sebagai lembaga pendidikan Islam yang unggul dalam prestasi
+                        akademik dan non-akademik, berakhlakul karimah, serta berbudaya lingkungan.
                     </p>
                 </div>
                 <div class="vm-card">
@@ -864,27 +874,32 @@
                 <div class="card">
                     <i class="fas fa-quran"></i>
                     <h3>Pendidikan Islami</h3>
-                    <p>Pembelajaran Al-Qur'an, hadits, dan akhlak mulia terintegrasi dalam setiap kegiatan pembelajaran sehari-hari</p>
+                    <p>Pembelajaran Al-Qur'an, hadits, dan akhlak mulia terintegrasi dalam setiap kegiatan pembelajaran
+                        sehari-hari</p>
                 </div>
                 <div class="card">
                     <i class="fas fa-graduation-cap"></i>
                     <h3>Guru Berkualitas</h3>
-                    <p>Tenaga pendidik profesional, bersertifikat, dan berpengalaman dalam mendidik anak usia sekolah dasar</p>
+                    <p>Tenaga pendidik profesional, bersertifikat, dan berpengalaman dalam mendidik anak usia sekolah
+                        dasar</p>
                 </div>
                 <div class="card">
                     <i class="fas fa-trophy"></i>
                     <h3>Prestasi Unggul</h3>
-                    <p>Siswa-siswi kami konsisten meraih prestasi di berbagai kompetisi akademik dan non-akademik tingkat daerah</p>
+                    <p>Siswa-siswi kami konsisten meraih prestasi di berbagai kompetisi akademik dan non-akademik
+                        tingkat daerah</p>
                 </div>
                 <div class="card">
                     <i class="fas fa-users"></i>
                     <h3>Ekstrakurikuler</h3>
-                    <p>Program pengembangan bakat melalui pramuka, seni, olahraga, dan kegiatan keagamaan yang beragam</p>
+                    <p>Program pengembangan bakat melalui pramuka, seni, olahraga, dan kegiatan keagamaan yang beragam
+                    </p>
                 </div>
                 <div class="card">
                     <i class="fas fa-building"></i>
                     <h3>Fasilitas Lengkap</h3>
-                    <p>Ruang kelas nyaman, perpustakaan, laboratorium komputer, dan area bermain yang aman untuk anak-anak</p>
+                    <p>Ruang kelas nyaman, perpustakaan, laboratorium komputer, dan area bermain yang aman untuk
+                        anak-anak</p>
                 </div>
                 <div class="card">
                     <i class="fas fa-heart"></i>
@@ -900,26 +915,30 @@
             <h2>Galeri Kegiatan</h2>
             <div class="gallery">
                 <div class="gallery-item">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%231e8449' width='400' height='300'/%3E%3Cpath d='M 50 150 Q 100 50 150 150 T 250 150 T 350 150' stroke='%23f39c12' stroke-width='8' fill='none'/%3E%3Ccircle cx='100' cy='100' r='30' fill='%2327ae60'/%3E%3Ccircle cx='200' cy='100' r='30' fill='%2327ae60'/%3E%3Ccircle cx='300' cy='100' r='30' fill='%2327ae60'/%3E%3Ctext x='200' y='250' font-family='Arial' font-size='24' font-weight='bold' text-anchor='middle' fill='%23fff'%3EKegiatan Pramuka%3C/text%3E%3C/svg%3E" alt="Kegiatan Pramuka" />
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%231e8449' width='400' height='300'/%3E%3Cpath d='M 50 150 Q 100 50 150 150 T 250 150 T 350 150' stroke='%23f39c12' stroke-width='8' fill='none'/%3E%3Ccircle cx='100' cy='100' r='30' fill='%2327ae60'/%3E%3Ccircle cx='200' cy='100' r='30' fill='%2327ae60'/%3E%3Ccircle cx='300' cy='100' r='30' fill='%2327ae60'/%3E%3Ctext x='200' y='250' font-family='Arial' font-size='24' font-weight='bold' text-anchor='middle' fill='%23fff'%3EKegiatan Pramuka%3C/text%3E%3C/svg%3E"
+                        alt="Kegiatan Pramuka" />
                     <div class="gallery-caption">Kegiatan Pramuka</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%2327ae60' width='400' height='300'/%3E%3Crect x='80' y='80' width='240' height='140' fill='%23fff' rx='10'/%3E%3Cline x1='100' y1='120' x2='280' y2='120' stroke='%231e8449' stroke-width='3'/%3E%3Cline x1='100' y1='150' x2='280' y2='150' stroke='%231e8449' stroke-width='3'/%3E%3Cline x1='100' y1='180' x2='280' y2='180' stroke='%231e8449' stroke-width='3'/%3E%3Ccircle cx='320' cy='180' r='40' fill='%23f39c12'/%3E%3Ctext x='200' y='260' font-family='Arial' font-size='24' font-weight='bold' text-anchor='middle' fill='%23fff'%3EProses Pembelajaran%3C/text%3E%3C/svg%3E" alt="Proses Pembelajaran" />
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%2327ae60' width='400' height='300'/%3E%3Crect x='80' y='80' width='240' height='140' fill='%23fff' rx='10'/%3E%3Cline x1='100' y1='120' x2='280' y2='120' stroke='%231e8449' stroke-width='3'/%3E%3Cline x1='100' y1='150' x2='280' y2='150' stroke='%231e8449' stroke-width='3'/%3E%3Cline x1='100' y1='180' x2='280' y2='180' stroke='%231e8449' stroke-width='3'/%3E%3Ccircle cx='320' cy='180' r='40' fill='%23f39c12'/%3E%3Ctext x='200' y='260' font-family='Arial' font-size='24' font-weight='bold' text-anchor='middle' fill='%23fff'%3EProses Pembelajaran%3C/text%3E%3C/svg%3E"
+                        alt="Proses Pembelajaran" />
                     <div class="gallery-caption">Proses Pembelajaran</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23f39c12' width='400' height='300'/%3E%3Cpath d='M 200 50 L 220 110 L 280 110 L 230 150 L 250 210 L 200 170 L 150 210 L 170 150 L 120 110 L 180 110 Z' fill='%231e8449' stroke='%23fff' stroke-width='3'/%3E%3Ccircle cx='200' cy='140' r='60' fill='none' stroke='%2327ae60' stroke-width='5'/%3E%3Ctext x='200' y='260' font-family='Arial' font-size='24' font-weight='bold' text-anchor='middle' fill='%23fff'%3EKegiatan Keagamaan%3C/text%3E%3C/svg%3E" alt="Kegiatan Keagamaan" />
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23f39c12' width='400' height='300'/%3E%3Cpath d='M 200 50 L 220 110 L 280 110 L 230 150 L 250 210 L 200 170 L 150 210 L 170 150 L 120 110 L 180 110 Z' fill='%231e8449' stroke='%23fff' stroke-width='3'/%3E%3Ccircle cx='200' cy='140' r='60' fill='none' stroke='%2327ae60' stroke-width='5'/%3E%3Ctext x='200' y='260' font-family='Arial' font-size='24' font-weight='bold' text-anchor='middle' fill='%23fff'%3EKegiatan Keagamaan%3C/text%3E%3C/svg%3E"
+                        alt="Kegiatan Keagamaan" />
                     <div class="gallery-caption">Kegiatan Keagamaan</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%2316a085' width='400' height='300'/%3E%3Crect x='100' y='100' width='200' height='120' fill='%231e8449' rx='10'/%3E%3Ccircle cx='200' cy='160' r='40' fill='%23f39c12'/%3E%3Cpolygon points='200,130 210,150 230,150 215,165 220,185 200,172 180,185 185,165 170,150 190,150' fill='%23fff'/%3E%3Ctext x='200' y='260' font-family='Arial' font-size='24' font-weight='bold' text-anchor='middle' fill='%23fff'%3EPrestasi Siswa%3C/text%3E%3C/svg%3E" alt="Prestasi Siswa" />
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%2316a085' width='400' height='300'/%3E%3Crect x='100' y='100' width='200' height='120' fill='%231e8449' rx='10'/%3E%3Ccircle cx='200' cy='160' r='40' fill='%23f39c12'/%3E%3Cpolygon points='200,130 210,150 230,150 215,165 220,185 200,172 180,185 185,165 170,150 190,150' fill='%23fff'/%3E%3Ctext x='200' y='260' font-family='Arial' font-size='24' font-weight='bold' text-anchor='middle' fill='%23fff'%3EPrestasi Siswa%3C/text%3E%3C/svg%3E"
+                        alt="Prestasi Siswa" />
                     <div class="gallery-caption">Prestasi Siswa</div>
                 </div>
             </div>
         </div>
     </section>
 
-     <!-- ABSENSI DIGITAL PREVIEW -->
+    <!-- ABSENSI DIGITAL PREVIEW -->
     <section id="absensi" class="section">
         <div class="container">
             <div class="section-title">
@@ -928,26 +947,22 @@
             </div>
             <div class="absensi-container">
                 <div class="absensi-gallery">
-                <div class="absensi-img-wrapper">
-                    <img src="assets/absen1.jpeg" alt="Tampilan Absensi Siswa - Halaman Login" />
-                </div>
-                <div class="absensi-img-wrapper">
-                    <img src="assets/absen2.jpeg" alt="Tampilan Absensi Siswa - Daftar Kehadiran" />
-                </div>
-                <div class="absensi-img-wrapper">
-                    <img src="assets/absen3.jpeg" alt="Tampilan Absensi Orang Tua - Laporan Bulanan" />
-                </div>
+                    <div class="absensi-img-wrapper">
+                        <img src="assets/absen1.jpeg" alt="Tampilan Absensi Siswa - Halaman Login" />
+                    </div>
+                    <div class="absensi-img-wrapper">
+                        <img src="assets/absen2.jpeg" alt="Tampilan Absensi Siswa - Daftar Kehadiran" />
+                    </div>
+                    <div class="absensi-img-wrapper">
+                        <img src="assets/absen3.jpeg" alt="Tampilan Absensi Orang Tua - Laporan Bulanan" />
+                    </div>
                 </div>
                 <p class="absensi-desc">
-                Pantau kehadiran putra-putri Anda secara real-time melalui sistem absensi digital berbasis web.
+                    Pantau kehadiran putra-putri Anda secara real-time melalui sistem absensi digital berbasis web.
                 </p>
-                <a
-                href="https://sekolahpintar.my/mimaarifgrabag1/presensi/  "
-                target="_blank"
-                rel="noopener"
-                class="btn-absensi"
-                >
-                Buka Aplikasi Absensi
+                <a href="https://sekolahpintar.my/mimaarifgrabag1/presensi/  " target="_blank" rel="noopener"
+                    class="btn-absensi">
+                    Buka Aplikasi Absensi
                 </a>
             </div>
         </div>
@@ -955,61 +970,57 @@
 
     <!-- E-LEARNING PREVIEW -->
     <section id="elearning" class="section">
-      <div class="container">
-        <div class="section-title">
-          <h2>E-Learning Sekolah</h2>
-          <div></div>
-        </div>
-        <div class="elearning-container">
-          <div class="elearning-gallery">
-            <div class="elearning-img-wrapper">
-              <img src="assets/img/elearning1.jpeg" alt="Tampilan Dashboard E-Learning Siswa" />
+        <div class="container">
+            <div class="section-title">
+                <h2>E-Learning Sekolah</h2>
+                <div></div>
             </div>
-            <div class="elearning-img-wrapper">
-              <img src="assets/img/elearning2.jpeg" alt="Materi Pelajaran Interaktif" />
+            <div class="elearning-container">
+                <div class="elearning-gallery">
+                    <div class="elearning-img-wrapper">
+                        <img src="assets/elearning1.jpeg" alt="Tampilan Dashboard E-Learning Siswa" />
+                    </div>
+                    <div class="elearning-img-wrapper">
+                        <img src="assets/elearning2.jpeg" alt="Materi Pelajaran Interaktif" />
+                    </div>
+                </div>
+                <p class="elearning-desc">
+                    Akses materi pelajaran, tugas, dan kuis secara online kapan saja dan di mana saja.
+                </p>
+                <a href="https://sekolahpintar.my/smpislamsarbini/elearning/" target="_blank" rel="noopener"
+                    class="btn-elearning">
+                    Buka Platform E-Learning
+                </a>
             </div>
-          </div>
-          <p class="elearning-desc">
-            Akses materi pelajaran, tugas, dan kuis secara online kapan saja dan di mana saja.
-          </p>
-          <a
-            href="https://sekolahpintar.my/smpislamsarbini/elearning/"
-            target="_blank"
-            rel="noopener"
-            class="btn-elearning"
-          >
-            Buka Platform E-Learning
-          </a>
         </div>
-      </div>
     </section>
 
     <!-- BELL SEKOLAH IOT PREVIEW -->
     <section id="bell-iot" class="section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Bell Sekolah Otomatis (IoT)</h2>
-          <div></div>
-        </div>
-        <div class="bell-container">
-          <div class="bell-gallery">
-            <div class="bell-img-wrapper">
-              <img src="assets/bel1.jpeg" alt="Antarmuka Pengaturan Jadwal Bell" />
+        <div class="container">
+            <div class="section-title">
+                <h2>Bell Sekolah Otomatis (IoT)</h2>
+                <div></div>
             </div>
-            <div class="bell-img-wrapper">
-              <img src="assets/bel2.jpeg" alt="Fitur Jadwal Bell" />
+            <div class="bell-container">
+                <div class="bell-gallery">
+                    <div class="bell-img-wrapper">
+                        <img src="assets/bel1.jpeg" alt="Antarmuka Pengaturan Jadwal Bell" />
+                    </div>
+                    <div class="bell-img-wrapper">
+                        <img src="assets/bel2.jpeg" alt="Fitur Jadwal Bell" />
+                    </div>
+                    <div class="bell-img-wrapper">
+                        <img src="assets/bel3.jpeg" alt="Perangkat IoT Bell Sekolah" />
+                    </div>
+                </div>
+                <p class="bell-desc">
+                    Sistem bell otomatis berbasis IoT yang akurat, fleksibel, dan dapat dikendalikan dari mana saja.
+                </p>
+                <a href="https://sekolahpintar.my/bel" target="_blank" rel="noopener" class="btn-bell">
+                    Lihat Demo Bell IoT
+                </a>
             </div>
-            <div class="bell-img-wrapper">
-                <img src="assets/bel3.jpeg" alt="Perangkat IoT Bell Sekolah" />
-            </div>
-        </div>
-            <p class="bell-desc">
-            Sistem bell otomatis berbasis IoT yang akurat, fleksibel, dan dapat dikendalikan dari mana saja.
-            </p>
-        <a href="https://sekolahpintar.my/bel" target="_blank" rel="noopener" class="btn-bell">
-            Lihat Demo Bell IoT
-        </a>
-      </div>
     </section>
 
     <section id="contact" class="reveal">
@@ -1020,7 +1031,8 @@
                     <input type="text" placeholder="Nama Lengkap" required />
                     <input type="email" placeholder="Email / No HP" required />
                     <textarea rows="4" placeholder="Apa yang ingin Anda tanyakan?" required></textarea>
-                    <button type="submit" class="btn btn-primary" style="background: var(--accent); color: var(--dark); border: none;">
+                    <button type="submit" class="btn btn-primary"
+                        style="background: var(--accent); color: var(--dark); border: none;">
                         Kirim Pesan <i class="fas fa-paper-plane"></i>
                     </button>
                 </form>
@@ -1101,4 +1113,5 @@
         });
     </script>
 </body>
+
 </html>
