@@ -1168,12 +1168,11 @@
                             Video Demo Absensi Digital
                         </h3>
                         <div class="instagram-embed-container">
-                            <iframe src="https://www.instagram.com/reel/DUDQi1JD16c/embed/" 
-                                    frameborder="0" 
-                                    scrolling="no" 
-                                    allowtransparency="true" 
-                                    allowfullscreen>
-                            </iframe>
+                            <blockquote class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/reel/DUDQi1JD16c/"
+                            data-instgrm-version="14"
+                            style="max-width:540px; margin:auto;">
+                            </blockquote>
                         </div>
                     </div>
                     
@@ -1269,13 +1268,6 @@
                             </div>
                         </div>
                         
-                        <div class="absensi-buttons">
-                            <a href="https://sekolahpintar.my/elearning/" target="_blank" 
-                               class="btn-elearning">
-                                <i class="fas fa-external-link-alt"></i>
-                                Buka Platform E-Learning
-                            </a>
-                        </div>
                     </div>
                     
                     <!-- Akun Demo -->
@@ -1312,6 +1304,13 @@
                                 <i class="fas fa-info-circle"></i>
                                 Gunakan akun demo di atas untuk login dan menjelajahi fitur-fitur platform E-Learning.
                             </p>
+                            <div class="absensi-buttons">
+                                <a href="https://sekolahpintar.my/elearning/" target="_blank" 
+                                   class="btn-elearning">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Buka Platform E-Learning
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1454,6 +1453,9 @@
             });
         });
     </script>
+
+    <script async src="//www.instagram.com/embed.js"></script>
+
 </body>
 
 </html>

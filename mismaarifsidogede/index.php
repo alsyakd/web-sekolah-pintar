@@ -8,9 +8,9 @@
     <meta name="keywords" content="MIS Sidogede, Madrasah Ibtidaiyah, Sekolah Islam Grabag, Pendidikan Dasar Islam" />
     <meta name="description"
         content="MIS Sidogede Grabag: Menanamkan nilai Al-Qur'an sejak dini, membentuk generasi sholeh, cerdas, dan berkontribusi untuk bangsa." />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins  :wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css  " />
     <style>
         :root {
             --primary: #1e8449;
@@ -184,7 +184,7 @@
             display: flex;
             align-items: center;
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url("https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&q=80");
+                url("https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&q=80  ");
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -421,62 +421,139 @@
 
         /* === E-LEARNING === */
         .elearning-container {
-        max-width: 950px;
-        margin: 0 auto;
-        background: white;
-        padding: 30px;
-        border-radius: 18px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
         }
 
-        .elearning-gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 16px;
-        width: 100%;
-        max-width: 700px;
+        .elearning-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .elearning-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
         }
 
         .elearning-img-wrapper {
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .elearning-img-wrapper:hover {
+            transform: translateY(-5px);
         }
 
         .elearning-img-wrapper img {
-        width: 100%;
-        height: auto;
-        display: block;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
         }
 
-        .elearning-desc {
-        text-align: center;
-        font-size: 1.05rem;
-        color: var(--text-dark);
-        max-width: 600px;
-        margin: 0;
+        .elearning-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .elearning-feature {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .elearning-feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .elearning-feature i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .demo-account-box {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border: 2px dashed #cbd5e1;
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        .demo-account-title {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .account-role {
+            background: #dcfce7;
+            color: #166534;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .account-info {
+            background: white;
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 15px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .account-detail {
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .account-detail strong {
+            color: var(--primary);
+            min-width: 70px;
+            display: inline-block;
         }
 
         .btn-elearning {
-        background: var(--secondary);
-        color: white;
-        font-weight: 600;
-        padding: 14px 40px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
-        display: inline-block;
+            background: var(--secondary);
+            color: white;
+            font-weight: 600;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(22, 160, 133, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
         }
 
         .btn-elearning:hover {
-        transform: scale(1.03);
-        box-shadow: 0 6px 20px rgba(39, 174, 96, 0.6);
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(22, 160, 133, 0.6);
         }
 
         /* === BELL SEKOLAH IOT === */
@@ -615,63 +692,143 @@
             transform: translateY(-3px);
         }
 
+        /* === ABSENSI DIGITAL === */
         .absensi-container {
-            max-width: 950px;
+            max-width: 1200px;
             margin: 0 auto;
             background: white;
-            padding: 30px;
-            border-radius: 18px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 25px;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
         }
 
-        .absensi-gallery {
+        .absensi-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 16px;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center; /* Align ke atas */
+        }
+
+        /* --- Perubahan untuk embed Instagram --- */
+        .instagram-embed-container {
+            position: relative;
             width: 100%;
-            max-width: 700px;
+            max-width: 540px; /* Sesuaikan ukuran maksimum dengan ukuran default Instagram */
+            margin: 0 auto; /* Buat rata tengah */
+            padding-bottom: 100%; /* Rasio aspek 9:16 untuk video potrait (540x960px) */
+            height: 0;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .instagram-embed-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* --- Perubahan untuk tampilan di mobile --- */
+        @media (max-width: 768px) {
+            .absensi-grid {
+                grid-template-columns: 1fr; /* Satu kolom di mobile */
+                gap: 30px;
+            }
+            .instagram-embed-container {
+                max-width: 100%;
+                padding-bottom: 177.8%; /* Jaga rasio aspek */
+            }
+        }
+
+        .absensi-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
         }
 
         .absensi-img-wrapper {
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .absensi-img-wrapper:hover {
+            transform: translateY(-5px);
         }
 
         .absensi-img-wrapper img {
             width: 100%;
-            height: auto;
+            height: 200px;
+            object-fit: cover;
             display: block;
         }
 
-        .absensi-desc {
-            text-align: center;
-            font-size: 1.05rem;
-            color: var(--text-dark);
-            max-width: 600px;
-            margin: 0;
+        .absensi-features {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start; /* Align ke atas agar ikon dan teks sejajar */
+            gap: 15px;
+            padding: 15px;
+            background: var(--light);
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .feature-item i {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .feature-item h4 {
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .feature-item p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .absensi-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
         }
 
         .btn-absensi {
-            background: var(--secondary);
+            background: var(--primary);
             color: white;
             font-weight: 600;
-            padding: 14px 40px;
+            padding: 14px 30px;
             border-radius: 50px;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
-            display: inline-block;
+            box-shadow: 0 4px 15px rgba(30, 132, 73, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .btn-absensi:hover {
-            transform: scale(1.03);
-            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.6);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(30, 132, 73, 0.6);
+        }
+
+        .btn-secondary {
+            background: var(--light);
+            color: var(--primary);
+            border: 2px solid var(--primary);
         }
 
         /* Footer */
@@ -818,7 +975,7 @@
                         ibadah, kami siap menyiapkan generasi masa depan yang unggul di dunia dan akhirat.</p>
                 </div>
                 <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80"
+                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80  "
                         alt="Kampus MIS Sidogede Grabag" />
                     <div class="img-caption">Kampus MIS Sidogede Grabag</div>
                 </div>
@@ -885,22 +1042,22 @@
             <h2>Dokumentasi Kegiatan</h2>
             <div class="gallery-cards">
                 <div class="gallery-card">
-                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80"
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80  "
                         alt="Belajar Bersama" />
                     <div class="card-caption">Belajar Bersama</div>
                 </div>
                 <div class="gallery-card">
-                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80"
+                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80  "
                         alt="MTQ Anak-Anak" />
                     <div class="card-caption">MTQ Anak-Anak</div>
                 </div>
                 <div class="gallery-card">
-                    <img src="https://images.pexels.com/photos/3875190/pexels-photo-3875190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    <img src="https://images.pexels.com/photos/3875190/pexels-photo-3875190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1  "
                         alt="Pramuka" />
                     <div class="card-caption">Pramuka</div>
                 </div>
                 <div class="gallery-card">
-                    <img src="https://images.pexels.com/photos/6984310/pexels-photo-6984310.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    <img src="https://images.pexels.com/photos/6984310/pexels-photo-6984310.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1  "
                         alt="Lomba Kaligrafi" />
                     <div class="card-caption">Lomba Kaligrafi</div>
                 </div>
@@ -909,64 +1066,167 @@
     </section>
 
     <!-- ABSENSI DIGITAL PREVIEW -->
-    <section id="absensi" class="section">
+    <section id="absensi" class="reveal">
         <div class="container">
             <div class="section-title">
                 <h2>Absensi Digital Sekolah</h2>
-                <div></div>
             </div>
             <div class="absensi-container">
-                <div class="absensi-gallery">
-                    <div class="absensi-img-wrapper">
-                        <img src="assets/absen1.jpeg" alt="Tampilan Absensi Siswa - Halaman Login" />
+                <div class="absensi-grid">
+                    <!-- Video Promo Instagram -->
+                    <div>
+                        <h3 class="demo-account-title">
+                            <i class="fab fa-instagram"></i>
+                            Video Demo Absensi Digital
+                        </h3>
+                        <div class="instagram-embed-container">
+                            <blockquote class="instagram-media"
+                            data-instgrm-permalink="https://www.instagram.com/reel/DUDQi1JD16c/"
+                            data-instgrm-version="14"
+                            style="max-width:540px; margin:auto;">
+                            </blockquote>
+                        </div>
                     </div>
-                    <div class="absensi-img-wrapper">
-                        <img src="assets/absen2.jpeg" alt="Tampilan Absensi Siswa - Daftar Kehadiran" />
-                    </div>
-                    <div class="absensi-img-wrapper">
-                        <img src="assets/absen3.jpeg" alt="Tampilan Absensi Orang Tua - Laporan Bulanan" />
+                    
+                    <!-- Gallery Absensi -->
+                    <div class="absensi-features">
+                        <h3 class="demo-account-title">
+                            <i class="fas fa-images"></i>
+                            Tampilan Aplikasi Absensi
+                        </h3>
+                        
+                        <div class="absensi-images">
+                            <div class="absensi-img-wrapper">
+                                <img src="assets/absen1.jpeg" alt="Tampilan Absensi Siswa - Halaman Login" />
+                            </div>
+                            <div class="absensi-img-wrapper">
+                                <img src="assets/absen2.jpeg" alt="Tampilan Absensi Siswa - Daftar Kehadiran" />
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Real-time Monitoring</h4>
+                                <p>Pantau kehadiran siswa secara langsung</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <i class="fas fa-bell"></i>
+                            <div>
+                                <h4>Notifikasi Orang Tua</h4>
+                                <p>Notifikasi langsung via WhatsApp/Email</p>
+                            </div>
+                        </div>
+                        
+                        <div class="absensi-buttons">
+                            <a href="https://sekolahpintar.my/mimaarifgrabag1/presensi/  " target="_blank" 
+                               class="btn-absensi">
+                                <i class="fas fa-external-link-alt"></i>
+                                Buka Aplikasi Absensi
+                            </a>
+                            <a href="#contact" class="btn-absensi btn-secondary">
+                                <i class="fas fa-info-circle"></i>
+                                Info Lebih Lanjut
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <p class="absensi-desc">
-                    Pantau kehadiran putra-putri Anda secara real-time melalui sistem absensi digital berbasis web.
-                </p>
-                <a href="https://sekolahpintar.my/missidogede/presensi/  " target="_blank" rel="noopener"
-                    class="btn-absensi">
-                    Buka Aplikasi Absensi
-                </a>
             </div>
         </div>
     </section>
 
     <!-- E-LEARNING PREVIEW -->
-    <section id="elearning" class="section">
-      <div class="container">
-        <div class="section-title">
-          <h2>E-Learning Sekolah</h2>
-          <div></div>
-        </div>
-        <div class="elearning-container">
-          <div class="elearning-gallery">
-            <div class="elearning-img-wrapper">
-              <img src="assets/img/elearning1.jpeg" alt="Tampilan Dashboard E-Learning Siswa" />
+    <section id="elearning" class="reveal">
+        <div class="container">
+            <div class="section-title">
+                <h2>E-Learning Sekolah</h2>
             </div>
-            <div class="elearning-img-wrapper">
-              <img src="assets/img/elearning2.jpeg" alt="Materi Pelajaran Interaktif" />
+            <div class="elearning-container">
+                <div class="elearning-grid">
+                    <!-- Gallery E-Learning dan Fitur -->
+                    <div>
+                        <div class="elearning-images">
+                            <div class="elearning-img-wrapper">
+                                <img src="assets/elearning1.jpeg" alt="Tampilan Dashboard E-Learning Siswa" />
+                            </div>
+                            <div class="elearning-img-wrapper">
+                                <img src="assets/elearning2.jpeg" alt="Materi Pelajaran Interaktif" />
+                            </div>
+                        </div>
+                        
+                        <div class="elearning-features">
+                            <div class="elearning-feature">
+                                <i class="fas fa-book"></i>
+                                <h4>Materi Digital</h4>
+                                <p>Akses materi pelajaran online</p>
+                            </div>
+                            <div class="elearning-feature">
+                                <i class="fas fa-tasks"></i>
+                                <h4>Tugas Online</h4>
+                                <p>Upload dan kumpulkan tugas</p>
+                            </div>
+                            <div class="elearning-feature">
+                                <i class="fas fa-comments"></i>
+                                <h4>Forum Diskusi</h4>
+                                <p>Diskusi dengan guru dan teman</p>
+                            </div>
+                            <div class="elearning-feature">
+                                <i class="fas fa-chart-line"></i>
+                                <h4>Progress Tracking</h4>
+                                <p>Pantau perkembangan belajar</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Akun Demo -->
+                    <div>
+                        <div class="demo-account-box">
+                            <div class="demo-account-title">
+                                <i class="fas fa-user-graduate"></i>
+                                Akun Demo untuk Mencoba
+                            </div>
+                            
+                            <!-- Guru Account -->
+                            <div class="account-info">
+                                <span class="account-role">Guru / Pengajar</span>
+                                <div class="account-detail">
+                                    <strong>Email:</strong> guru@sekolahpintar.my
+                                </div>
+                                <div class="account-detail">
+                                    <strong>Password:</strong> guru
+                                </div>
+                            </div>
+                            
+                            <!-- Siswa Account -->
+                            <div class="account-info">
+                                <span class="account-role">Siswa</span>
+                                <div class="account-detail">
+                                    <strong>Email:</strong> siswa@sekolahpintar.my
+                                </div>
+                                <div class="account-detail">
+                                    <strong>Password:</strong> siswa
+                                </div>
+                            </div>
+                            
+                            <p class="account-detail" style="font-size: 0.9rem; margin-top: 15px; color: var(--gray);">
+                                <i class="fas fa-info-circle"></i>
+                                Gunakan akun demo di atas untuk login dan menjelajahi fitur-fitur platform E-Learning.
+                            </p>
+                            <div class="absensi-buttons">
+                                <a href="https://sekolahpintar.my/elearning/" target="_blank" 
+                                   class="btn-elearning">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Buka Platform E-Learning
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <p class="elearning-desc">
-            Akses materi pelajaran, tugas, dan kuis secara online kapan saja dan di mana saja.
-          </p>
-          <a
-            href="https://sekolahpintar.my/smpislamsarbini/elearning/"
-            target="_blank"
-            rel="noopener"
-            class="btn-elearning"
-          >
-            Buka Platform E-Learning
-          </a>
         </div>
-      </div>
     </section>
 
     <!-- BELL SEKOLAH IOT PREVIEW -->
@@ -990,7 +1250,7 @@
                 <p class="bell-desc">
                     Sistem bell otomatis berbasis IoT yang akurat, fleksibel, dan dapat dikendalikan dari mana saja untuk menunjang kegiatan belajar mengajar yang lebih teratur.
                 </p>
-                <a href="https://sekolahpintar.my/bel" target="_blank" rel="noopener" class="btn-bell">
+                <a href="https://sekolahpintar.my/bel  " target="_blank" rel="noopener" class="btn-bell">
                     Lihat Demo Bell IoT
                 </a>
             </div>
@@ -1082,6 +1342,7 @@
             });
         });
     </script>
+    <script async src="//www.instagram.com/embed.js"></script>
 </body>
 
 </html>
