@@ -575,7 +575,7 @@
         .absensi-features {
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            gap: 8px;
         }
 
         .feature-item {
@@ -812,29 +812,79 @@
             display: block;
         }
 
-        .bell-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        .demo-account-simple {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .demo-account-simple h4 {
+            color: #495057;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .demo-credentials {
+            background: white;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px dashed #dee2e6;
+        }
+
+        .demo-credentials div {
+            padding: 4px 0;
+        }
+
+        /* Versi Minimalis */
+        .bell-features-grid {
+            display: flex;
+            flex-wrap: wrap;
             gap: 20px;
-            width: 100%;
-            max-width: 800px;
+            margin: 40px 0;
+            justify-content: center;
         }
 
-        .bell-feature {
-            background: var(--light);
+        .bell-feature-card {
+            flex: 1;
+            min-width: 200px;
+            max-width: 250px;
+            background: #f8f9fa;
+            border-radius: 10px;
             padding: 20px;
-            border-radius: 12px;
             text-align: center;
+            border: 1px solid #e9ecef;
         }
 
-        .bell-feature i {
+        .bell-feature-icon {
             font-size: 2rem;
             color: var(--primary);
             margin-bottom: 15px;
         }
 
+        .demo-card .bell-feature-icon {
+            color: var(--primary);
+        }
+
+        .bell-feature-card h4 {
+            margin-bottom: 10px;
+            color: #343a40;
+        }
+
+        .demo-credentials {
+            background: white;
+            padding: 8px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border: 1px solid #dee2e6;
+        }
+
         .btn-bell {
-            background: var(--accent);
+            background: var(--primary);
             color: white;
             font-weight: 600;
             padding: 16px 40px;
@@ -842,7 +892,7 @@
             text-decoration: none;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+            box-shadow: 0 4px 15px rgba(var(--primary-rgb), 0.4);
             display: inline-flex;
             align-items: center;
             gap: 10px;
@@ -850,7 +900,7 @@
 
         .btn-bell:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(243, 156, 18, 0.6);
+            box-shadow: 0 8px 25px rgba(var(--primary-rgb), 0.6);
         }
 
         #contact {
@@ -1336,21 +1386,45 @@
                     </div>
                 </div>
                 
-                <div class="bell-features">
-                    <div class="bell-feature">
-                        <i class="fas fa-clock"></i>
+                <!-- Fitur-fitur dalam grid 4 kolom -->
+                <div class="bell-features-grid">
+                    <div class="bell-feature-card">
+                        <div class="bell-feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
                         <h4>Jadwal Fleksibel</h4>
-                        <p>Atur jadwal bel sesuai kebutuhan</p>
+                        <p>Atur jadwal bel sesuai kebutuhan pembelajaran</p>
                     </div>
-                    <div class="bell-feature">
-                        <i class="fas fa-wifi"></i>
+
+                    <div class="bell-feature-card">
+                        <div class="bell-feature-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
                         <h4>Kontrol Online</h4>
-                        <p>Kendalikan dari smartphone/PC</p>
+                        <p>Kendalikan dari smartphone atau komputer</p>
                     </div>
-                    <div class="bell-feature">
-                        <i class="fas fa-bell"></i>
+
+                    <div class="bell-feature-card">
+                        <div class="bell-feature-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
                         <h4>Multiple Sound</h4>
                         <p>Berbagai pilihan suara bel</p>
+                    </div>
+
+                    <div class="bell-feature-card demo-card">
+                        <div class="bell-feature-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <h4>Akun Demo Testing</h4>
+                        <div class="demo-credentials">
+                            <div><strong>Username:</strong> admin</div>
+                            <div><strong>Password:</strong> admin</div>
+                        </div>
+                        <small class="text-muted">
+                            <i class="fas fa-info-circle"></i>
+                            Gunakan untuk mencoba fitur admin
+                        </small>
                     </div>
                 </div>
                 

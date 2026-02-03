@@ -788,133 +788,184 @@
             display: block;
         }
 
-        .bell-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        .demo-account-simple {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .demo-account-simple h4 {
+            color: #495057;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .demo-credentials {
+            background: white;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px dashed #dee2e6;
+        }
+
+        .demo-credentials div {
+            padding: 4px 0;
+        }
+
+        /* Versi Minimalis */
+        .bell-features-grid {
+            display: flex;
+            flex-wrap: wrap;
             gap: 20px;
-            width: 100%;
-            max-width: 800px;
+            margin: 40px 0;
+            justify-content: center;
         }
 
-        .bell-feature {
-            background: var(--light);
+        .bell-feature-card {
+            flex: 1;
+            min-width: 200px;
+            max-width: 250px;
+            background: #f8f9fa;
+            border-radius: 10px;
             padding: 20px;
-            border-radius: 12px;
             text-align: center;
+            border: 1px solid #e9ecef;
         }
 
-        .bell-feature i {
+        .bell-feature-icon {
             font-size: 2rem;
             color: var(--primary);
             margin-bottom: 15px;
         }
-      .btn-bell {
-          background: #1e40af;
+
+        .demo-card .bell-feature-icon {
+            color: var(--primary);
+        }
+
+        .bell-feature-card h4 {
+            margin-bottom: 10px;
+            color: #343a40;
+        }
+
+        .demo-credentials {
+            background: white;
+            padding: 8px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border: 1px solid #dee2e6;
+        }
+
+        .btn-bell {
+            background: #1e40af;
+            color: white;
+            font-weight: 600;
+            padding: 15px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(51, 105, 30, 0.3);
+            display: inline-block;
+            border: 2px solid transparent;
+        }
+
+        .btn-bell:hover {
+            background: transparent;
+            color: #1e40af;
+            border-color: #1e40af;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(30, 64, 175, 0.4);
+        }
+
+        /* CONTACT */
+        #contact {
+          background: var(--secondary);
           color: white;
-          font-weight: 600;
-          padding: 15px 45px;
-          border-radius: 50px;
-          text-decoration: none;
-          font-size: 1.1rem;
-          transition: all 0.3s ease;
-          box-shadow: 0 5px 20px rgba(51, 105, 30, 0.3);
-          display: inline-block;
-          border: 2px solid transparent;
-      }
+        }
+        #contact h2::after {
+          background: var(--accent);
+        }
+        form {
+          display: grid;
+          gap: 20px;
+          max-width: 700px;
+          margin-top: 30px;
+        }
+        input,
+        textarea {
+          padding: 16px;
+          border-radius: 12px;
+          border: none;
+          font-size: 1rem;
+          outline: none;
+          transition: 0.3s;
+        }
+        input:focus,
+        textarea:focus {
+          box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
+        }
+        form .btn {
+          cursor: pointer;
+          border: none;
+          width: fit-content;
+        }
 
-      .btn-bell:hover {
-          background: transparent;
-          color: #1e40af;
-          border-color: #1e40af;
-          transform: translateY(-3px);
-          box-shadow: 0 8px 25px rgba(30, 64, 175, 0.4);
-      }
+        footer {
+          text-align: center;
+          padding: 40px 20px;
+          background: var(--dark);
+          color: white;
+          opacity: 0.9;
+          font-size: 0.9rem;
+        }
 
-      /* CONTACT */
-      #contact {
-        background: var(--secondary);
-        color: white;
-      }
-      #contact h2::after {
-        background: var(--accent);
-      }
-      form {
-        display: grid;
-        gap: 20px;
-        max-width: 700px;
-        margin-top: 30px;
-      }
-      input,
-      textarea {
-        padding: 16px;
-        border-radius: 12px;
-        border: none;
-        font-size: 1rem;
-        outline: none;
-        transition: 0.3s;
-      }
-      input:focus,
-      textarea:focus {
-        box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
-      }
-      form .btn {
-        cursor: pointer;
-        border: none;
-        width: fit-content;
-      }
+          @media (max-width: 768px) {
+              #about .grid {
+                  grid-template-columns: 1fr;
+                  gap: 40px;
+              }
 
-      footer {
-        text-align: center;
-        padding: 40px 20px;
-        background: var(--dark);
-        color: white;
-        opacity: 0.9;
-        font-size: 0.9rem;
-      }
+              .vm-grid {
+                  grid-template-columns: 1fr;
+              }
 
-        @media (max-width: 768px) {
-            #about .grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
+              .absensi-grid,
+              .elearning-grid {
+                  grid-template-columns: 1fr;
+              }
 
-            .vm-grid {
-                grid-template-columns: 1fr;
-            }
+              .absensi-images,
+              .elearning-images,
+              .bell-images {
+                  grid-template-columns: 1fr;
+              }
 
-            .absensi-grid,
-            .elearning-grid {
-                grid-template-columns: 1fr;
-            }
+              h2 {
+                  text-align: center;
+              }
 
-            .absensi-images,
-            .elearning-images,
-            .bell-images {
-                grid-template-columns: 1fr;
-            }
+              h2::after {
+                  left: 50%;
+                  transform: translateX(-50%);
+              }
 
-            h2 {
-                text-align: center;
-            }
+              .absensi-buttons,
+              .bell-features {
+                  flex-direction: column;
+                  align-items: center;
+              }
 
-            h2::after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-            .absensi-buttons,
-            .bell-features {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn-absensi,
-            .btn-elearning,
-            .btn-bell {
-                width: 100%;
-                text-align: center;
-                justify-content: center;
-            }}
+              .btn-absensi,
+              .btn-elearning,
+              .btn-bell {
+                  width: 100%;
+                  text-align: center;
+                  justify-content: center;
+              }}
     </style>
   </head>
 
@@ -1061,10 +1112,10 @@
 
                         <div class="absensi-images">
                             <div class="absensi-img-wrapper">
-                                <img src="assets/absen1.jpeg" alt="Tampilan Dashboard Absensi" />
+                                <img src="assets/img/absen1.jpeg" alt="Tampilan Dashboard Absensi" />
                             </div>
                             <div class="absensi-img-wrapper">
-                                <img src="assets/absen2.jpeg" alt="Laporan Kehadiran Siswa" />
+                                <img src="assets/img/absen2.jpeg" alt="Laporan Kehadiran Siswa" />
                             </div>
                         </div>
 
@@ -1214,21 +1265,45 @@
                     </div>
                 </div>
                 
-                <div class="bell-features">
-                    <div class="bell-feature">
-                        <i class="fas fa-clock"></i>
+                <!-- Fitur-fitur dalam grid 4 kolom -->
+                <div class="bell-features-grid">
+                    <div class="bell-feature-card">
+                        <div class="bell-feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
                         <h4>Jadwal Fleksibel</h4>
-                        <p>Atur jadwal bel sesuai kebutuhan</p>
+                        <p>Atur jadwal bel sesuai kebutuhan pembelajaran</p>
                     </div>
-                    <div class="bell-feature">
-                        <i class="fas fa-wifi"></i>
+
+                    <div class="bell-feature-card">
+                        <div class="bell-feature-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
                         <h4>Kontrol Online</h4>
-                        <p>Kendalikan dari smartphone/PC</p>
+                        <p>Kendalikan dari smartphone atau komputer</p>
                     </div>
-                    <div class="bell-feature">
-                        <i class="fas fa-bell"></i>
+
+                    <div class="bell-feature-card">
+                        <div class="bell-feature-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
                         <h4>Multiple Sound</h4>
                         <p>Berbagai pilihan suara bel</p>
+                    </div>
+
+                    <div class="bell-feature-card demo-card">
+                        <div class="bell-feature-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <h4>Akun Demo Testing</h4>
+                        <div class="demo-credentials">
+                            <div><strong>Username:</strong> admin</div>
+                            <div><strong>Password:</strong> admin</div>
+                        </div>
+                        <small class="text-muted">
+                            <i class="fas fa-info-circle"></i>
+                            Gunakan untuk mencoba fitur admin
+                        </small>
                     </div>
                 </div>
                 
