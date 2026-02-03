@@ -111,16 +111,43 @@
             font-size: 1.5rem;
         }
 
-        /* Images */
-        .absensi-images, .elearning-images, .bell-images {
+        /* Images - Khusus untuk Bell Sekolah */
+        .absensi-images, .elearning-images {
             display: flex;
             gap: 10px;
             margin-bottom: 20px;
         }
-        .absensi-img-wrapper img, .elearning-img-wrapper img, .bell-img-wrapper img {
+        
+        /* Kelas baru khusus untuk foto bell */
+        .bell-images {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .absensi-img-wrapper img, .elearning-img-wrapper img {
             width: 100%;
             border-radius: 10px;
             border: 3px solid var(--primary);
+        }
+        
+        /* Styling khusus untuk foto bell - UKURAN SAMA */
+        .bell-img-wrapper {
+            width: 380px; /* Lebar tetap */
+            height: 200px; /* Tinggi tetap - sesuai permintaan */
+            overflow: hidden;
+            border-radius: 12px;
+            border: 3px solid var(--primary);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .bell-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Memastikan gambar terisi penuh tanpa distorsi */
+            display: block;
         }
 
         /* Demo Box */
@@ -182,6 +209,23 @@
             .absensi-grid, .elearning-grid { grid-template-columns: 1fr; }
             .nav-links { display: none; }
             .hero-content h1 { font-size: 2rem; }
+            
+            /* Responsive untuk bell images */
+            .bell-img-wrapper {
+                width: 100%;
+                max-width: 250px;
+                height: 400px;
+            }
+            
+            .bell-images {
+                gap: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .bell-img-wrapper {
+                height: 350px;
+            }
         }
     </style>
 </head>
