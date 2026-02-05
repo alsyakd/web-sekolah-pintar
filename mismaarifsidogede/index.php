@@ -598,7 +598,7 @@
         margin: 0;
         }
 
-                .demo-account-simple {
+        .demo-account-simple {
             background: #f8f9fa;
             border: 1px solid #e9ecef;
             border-radius: 8px;

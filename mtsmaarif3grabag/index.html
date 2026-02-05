@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTs Ma'arif 3 Grabag - Sekolah Digital Unggulan</title>
+    <link rel="icon" href="assets/logo.png" type="image/jpg">
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0d4d34;
+            /* Hijau khas Ma'arif/NU */
+            --secondary: #e67e22;
+            /* Orange untuk aksen */
+            --accent: #27ae60;
+            --dark: #1a1a2e;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --gray: #6c757d;
+            --gradient-primary: linear-gradient(135deg, #0d4d34 0%, #27ae60 100%);
+            --gradient-secondary: linear-gradient(135deg, #e67e22 0%, #f39c12 100%);
+            --shadow: 0 10px 30px rgba(13, 77, 52, 0.1);
+            --shadow-hover: 0 15px 40px rgba(13, 77, 52, 0.2);
+            --radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== NAVBAR MODERN ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(13, 77, 52, 0.08);
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-container img {
+            height: 50px;
+            border-radius: 12px;
+            border: 3px solid var(--primary);
+            padding: 3px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text strong {
+            color: var(--primary);
+            font-size: 1.3rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text small {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 8px 16px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links li a:hover {
+            color: var(--primary);
+            background: rgba(13, 77, 52, 0.05);
+        }
+
+        .nav-links li a.active {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: 0 5px 15px rgba(13, 77, 52, 0.2);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        /* ===== HERO SECTION MODERN ===== */
+        #home {
+            min-height: 100vh;
+            background: linear-gradient(rgba(13, 77, 52, 0.9), rgba(13, 77, 52, 0.8)), url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            padding: 120px 5% 80px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            color: white;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero-title span {
+            color: var(--secondary);
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--secondary);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--gradient-secondary);
+            color: white;
+            box-shadow: 0 10px 25px rgba(230, 126, 34, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(230, 126, 34, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+        }
+
+        /* ===== SECTION STYLES ===== */
+        .section {
+            padding: 100px 5%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-subtitle {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            display: inline-block;
+            padding: 5px 15px;
+            background: rgba(13, 77, 52, 0.1);
+            border-radius: 30px;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .section-title span {
+            color: var(--primary);
+            position: relative;
+        }
+
+        .section-title span::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(230, 126, 34, 0.2);
+            z-index: -1;
+        }
+
+        .section-description {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ===== ABSENSI SECTION - UPDATE LAYOUT ===== */
+        .absensi-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            margin-bottom: 60px;
+            transition: transform 0.3s ease;
+        }
+
+        .absensi-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .card-badge {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        /* LAYOUT BARU: Video kecil kiri, foto kanan */
+        .absensi-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            align-items: start;
+        }
+
+        .video-container-small {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .video-container-small::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(13, 77, 52, 0.2), rgba(230, 126, 34, 0.2));
+            z-index: 1;
+        }
+
+        .video-container-small iframe {
+            width: 100%;
+            height: 300px;
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+
+        .absensi-images-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .absensi-image-item {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 300px;
+            position: relative;
+        }
+
+        .absensi-image-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .absensi-image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(13, 77, 52, 0.8);
+            color: white;
+            padding: 10px 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .feature-item {
+            background: var(--light);
+            padding: 25px;
+            border-radius: var(--radius);
+            border-left: 5px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            background: white;
+            box-shadow: var(--shadow);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .feature-item h4 {
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .demo-account {
+            background: linear-gradient(135deg, #f8fafc 0%, #e8f5e9 100%);
+            border-radius: var(--radius);
+            padding: 30px;
+            border: 2px dashed var(--accent);
+            margin-bottom: 30px;
+        }
+
+        .demo-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .demo-header i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .credentials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .credential-item {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(13, 77, 52, 0.1);
+        }
+
+        .credential-role {
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* ===== E-LEARNING SECTION - UPDATE SEPERTI BELL ===== */
+        #elearning {
+            background: linear-gradient(135deg, #f8fafc 0%, #e8f5e9 100%);
+        }
+
+        .elearning-showcase {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .elearning-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            height: 350px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .elearning-image:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .elearning-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .elearning-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .elearning-feature {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .elearning-feature:hover {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .elearning-feature:hover .feature-icon {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-elearning {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: 0 10px 25px rgba(13, 77, 52, 0.2);
+        }
+
+        .btn-elearning:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(13, 77, 52, 0.3);
+        }
+
+        /* ===== BELL IOT SECTION ===== */
+        .bell-showcase {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .bell-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            height: 350px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .bell-image:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .bell-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .iot-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .iot-feature {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .iot-feature:hover {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .iot-feature:hover .feature-icon {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 5% 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-column h3 {
+            color: var(--secondary);
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .absensi-layout,
+            .elearning-showcase,
+            .bell-showcase {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section-title {
+                font-size: 2.3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-title {
+                font-size: 2.3rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .absensi-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .absensi-images-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .elearning-showcase,
+            .bell-showcase {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid,
+            .elearning-features,
+            .iot-features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section {
+                padding: 60px 5%;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .video-container-small iframe {
+                height: 250px;
+            }
+
+            .absensi-image-item,
+            .elearning-image,
+            .bell-image {
+                height: 300px;
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        /* ===== SCROLL TO TOP ===== */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 20px rgba(13, 77, 52, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .scroll-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            background: var(--primary);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo-container">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,10 90,35 90,75 50,95 10,75 10,35' fill='%230d4d34' stroke='%23fff' stroke-width='2'/%3E%3Ctext x='50' y='60' font-family='Arial' font-size='36' font-weight='bold' text-anchor='middle' fill='%23fff'%3EMTs%3C/text%3E%3Ctext x='50' y='78' font-family='Arial' font-size='24' text-anchor='middle' fill='%23fff'%3EM%3C/text%3E%3C/svg%3E"
+                alt="Logo MTs Ma'arif 3 Grabag">
+            <div class="logo-text">
+                <strong>MTs MA'ARIF 3</strong>
+                <small>Grabag - Magelang</small>
+            </div>
+        </div>
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Beranda</a></li>
+            <li><a href="#absensi">Absensi Digital</a></li>
+            <li><a href="#elearning">E-Learning</a></li>
+            <li><a href="#bell-iot">Bell IoT</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="container">
+            <div class="hero-content animate-fadeInUp">
+                <span class="hero-badge">Madrasah Digital Terdepan</span>
+                <h1 class="hero-title">Membangun Generasi <span>Cerdas & Berkarakter</span></h1>
+                <p class="hero-description">
+                    MTs Ma'arif 3 Grabag - Mengintegrasikan ilmu pengetahuan dengan nilai-nilai Al-Qur'an untuk
+                    menciptakan generasi emas yang unggul di dunia dan akhirat.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#absensi" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> Jelajahi Sistem Digital
+                    </a>
+                    <a href="#kontak" class="btn btn-outline">
+                        <i class="fas fa-phone-alt"></i> Hubungi Kami
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Digitalisasi</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Akses Sistem</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Platform Digital</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Absensi Digital Section -->
+    <section id="absensi" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Digital Transformation</span>
+                <h2 class="section-title">Sistem <span>Absensi Digital</span></h2>
+                <p class="section-description">
+                    Monitoring kehadiran siswa secara real-time dengan teknologi terbaru untuk meningkatkan efisiensi
+                    dan akurasi
+                </p>
+            </div>
+            <div class="absensi-card animate-fadeInUp delay-1">
+                <div class="card-header">
+                    <h3 class="card-title">Demo & Tampilan Sistem</h3>
+                    <span class="card-badge">LIVE DEMO</span>
+                </div>
+                <!-- LAYOUT BARU: Video kiri, foto kanan -->
+                <div class="absensi-layout">
+                    <div class="video-container-small">
+                        <iframe src="https://drive.google.com/file/d/1VKsXNTbwuXER6rPFsSoDlGl4jK0vHlPg/preview"
+                            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    <div class="absensi-images-grid">
+                        <div class="absensi-image-item">
+                            <img src="assets/absen1.jpeg" alt="Dashboard Absensi">
+                            <div class="image-caption">Dashboard Admin</div>
+                        </div>
+                        <div class="absensi-image-item">
+                            <img src="assets/absen2.jpeg" alt="Laporan Kehadiran">
+                            <div class="image-caption">Laporan Kehadiran</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>Real-time Monitoring</h4>
+                        <p>Pantau kehadiran siswa secara langsung melalui dashboard admin dan guru dengan update
+                            real-time.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <h4>Presensi Otomatis</h4>
+                        <p>Sistem presensi otomatis yang akurat dan cepat, mengurangi kesalahan manual.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h4>Analytics Lengkap</h4>
+                        <p>Laporan statistik dan analisis kehadiran untuk evaluasi pembelajaran.</p>
+                    </div>
+                </div>
+                <div class="demo-account">
+                    <div class="demo-header">
+                        <i class="fas fa-key"></i>
+                        <div>
+                            <h3>Akun Demo Testing</h3>
+                            <p>Gunakan akun berikut untuk mencoba sistem absensi digital</p>
+                        </div>
+                    </div>
+                    <div class="credentials">
+                        <div class="credential-item">
+                            <span class="credential-role">Administrator</span>
+                            <div><strong>Username:</strong> admin</div>
+                            <div><strong>Password:</strong> admin</div>
+                            <small style="color: var(--gray); display: block; margin-top: 5px;">Akses penuh semua
+                                fitur</small>
+                        </div>
+                        <div class="credential-item">
+                            <span class="credential-role">Guru</span>
+                            <div><strong>Username:</strong> guru</div>
+                            <div><strong>Password:</strong> guru123</div>
+                            <small style="color: var(--gray); display: block; margin-top: 5px;">Monitoring kelas</small>
+                        </div>
+                    </div>
+                    <div style="text-align: center; margin-top: 30px;">
+                        <a href="https://sekolahpintar.my/mtsmaarif3grabag/presensi/" target="_blank"
+                            class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Buka Aplikasi Absensi
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- E-Learning Section -->
+    <section id="elearning" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Digital Learning</span>
+                <h2 class="section-title">Platform <span>E-Learning</span></h2>
+                <p class="section-description">
+                    Sistem pembelajaran online terintegrasi dengan materi digital, tugas interaktif, dan komunikasi
+                    real-time
+                </p>
+            </div>
+            <!-- TAMPILAN BARU: 3 foto seperti Bell -->
+            <div class="elearning-showcase animate-fadeInUp">
+                <div class="elearning-image">
+                    <img src="assets/elearning1.jpeg" alt="Dashboard E-Learning">
+                    <div class="image-caption">Dashboard Pembelajaran</div>
+                </div>
+                <div class="elearning-image">
+                    <img src="assets/elearning2.jpeg" alt="Materi Pembelajaran">
+                    <div class="image-caption">Materi Digital</div>
+                </div>
+                <div class="elearning-image">
+                    <!-- Jika ada gambar ketiga, ganti dengan aset yang sesuai -->
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Kelas Online">
+                    <div class="image-caption">Kelas Interaktif</div>
+                </div>
+            </div>
+            <div class="elearning-features animate-fadeInUp delay-1">
+                <div class="elearning-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h4>Materi Digital Lengkap</h4>
+                    <p>Akses materi pelajaran dalam berbagai format: video, PDF, presentasi, dan konten interaktif.</p>
+                </div>
+                <div class="elearning-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h4>Tugas & Ujian Online</h4>
+                    <p>Pengumpulan tugas dan pelaksanaan ujian secara digital dengan sistem penilaian otomatis.</p>
+                </div>
+                <div class="elearning-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h4>Forum Diskusi</h4>
+                    <p>Ruang diskusi antara guru dan siswa untuk tanya jawab dan kolaborasi pembelajaran.</p>
+                </div>
+                <div class="elearning-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Progress Tracking</h4>
+                    <p>Pantau perkembangan belajar siswa dengan laporan dan statistik yang detail.</p>
+                </div>
+            </div>
+            <div class="demo-account" style="max-width: 800px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <h3 style="color: var(--primary); margin-bottom: 10px;">
+                        <i class="fas fa-user-graduate"></i> Akses Demo E-Learning
+                    </h3>
+                    <p>Login dengan akun berikut untuk menjelajahi platform pembelajaran digital</p>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
+                    <div
+                        style="background: white; padding: 25px; border-radius: 12px; border: 2px solid var(--secondary);">
+                        <span
+                            style="background: var(--secondary); color: white; padding: 8px 20px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; margin-bottom: 15px; display: inline-block;">
+                            Guru / Pengajar
+                        </span>
+                        <div style="margin-bottom: 10px;"><strong>Email:</strong> guru@mtsmaarif3grabag.sch.id</div>
+                        <div><strong>Password:</strong> guru123</div>
+                    </div>
+                    <div
+                        style="background: white; padding: 25px; border-radius: 12px; border: 2px solid var(--primary);">
+                        <span
+                            style="background: var(--primary); color: white; padding: 8px 20px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; margin-bottom: 15px; display: inline-block;">
+                            Siswa
+                        </span>
+                        <div style="margin-bottom: 10px;"><strong>Email:</strong> siswa@mtsmaarif3grabag.sch.id</div>
+                        <div><strong>Password:</strong> siswa123</div>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <a href="https://sekolahpintar.my/elearning/" target="_blank" class="btn btn-elearning"
+                        style="padding: 15px 40px;">
+                        <i class="fas fa-external-link-alt"></i> Masuk ke Platform E-Learning
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Bell IoT Section -->
+    <section id="bell-iot" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Smart Technology</span>
+                <h2 class="section-title">Sistem <span>Bell IoT</span></h2>
+                <p class="section-description">
+                    Bell sekolah otomatis berbasis Internet of Things yang dapat dikendalikan secara remote dengan
+                    presisi tinggi
+                </p>
+            </div>
+            <div class="bell-showcase animate-fadeInUp">
+                <div class="bell-image">
+                    <img src="assets/bel1.jpeg" alt="Jadwal Bell IoT">
+                    <div class="image-caption">Pengaturan Jadwal</div>
+                </div>
+                <div class="bell-image">
+                    <img src="assets/bel2.jpeg" alt="Kontrol Bell">
+                    <div class="image-caption">Kontrol Manual</div>
+                </div>
+                <div class="bell-image">
+                    <img src="assets/bel3.jpeg" alt="Perangkat IoT">
+                    <div class="image-caption">Device IoT</div>
+                </div>
+            </div>
+            <div class="iot-features animate-fadeInUp delay-1">
+                <div class="iot-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>Jadwal Fleksibel</h4>
+                    <p>Atur jadwal bel harian, khusus, atau sesuai kebutuhan dengan presisi tinggi.</p>
+                </div>
+                <div class="iot-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h4>Kontrol Online</h4>
+                    <p>Kendalikan sistem bell melalui aplikasi web dari mana saja dengan koneksi internet.</p>
+                </div>
+                <div class="iot-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4>Multi-Device</h4>
+                    <p>Akses sistem melalui smartphone, tablet, atau komputer desktop.</p>
+                </div>
+                <div class="iot-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h4>Log Historis</h4>
+                    <p>Riwayat penggunaan dan perubahan jadwal tersimpan dengan rapi.</p>
+                </div>
+            </div>
+            <div class="demo-account" style="max-width: 800px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <h3 style="color: var(--primary); margin-bottom: 10px;">
+                        <i class="fas fa-laptop-code"></i> Coba Sistem Bell IoT
+                    </h3>
+                    <p>Login dengan akun demo untuk menjelajahi fitur-fitur canggih</p>
+                </div>
+                <div style="background: var(--light); padding: 25px; border-radius: 12px; text-align: center;">
+                    <div style="margin-bottom: 20px;">
+                        <span
+                            style="background: var(--gradient-primary); color: white; padding: 10px 25px; border-radius: 30px; font-weight: 700; font-size: 1.1rem;">
+                            Akun Administrator
+                        </span>
+                    </div>
+                    <div style="font-size: 1.2rem; margin-bottom: 15px;">
+                        <strong>Username:</strong> admin &nbsp;&nbsp; | &nbsp;&nbsp; <strong>Password:</strong> admin
+                    </div>
+                    <small style="color: var(--gray); display: block; margin-bottom: 20px;">
+                        <i class="fas fa-info-circle"></i> Akun ini memiliki akses penuh untuk mengatur semua fitur
+                        sistem
+                    </small>
+                    <a href="https://sekolahpintar.my/bel" target="_blank" class="btn btn-primary"
+                        style="padding: 15px 40px;">
+                        <i class="fas fa-play-circle"></i> Lihat Demo Bell IoT
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer id="kontak">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>MTs Ma'arif 3 Grabag</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 20px;">
+                        Madrasah Tsanawiyah unggulan di bawah naungan LP Ma'arif NU yang mengintegrasikan teknologi
+                        digital dalam proses pembelajaran untuk menciptakan generasi cerdas, berakhlak mulia, dan
+                        berkarakter.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Sistem Digital</h3>
+                    <ul class="footer-links">
+                        <li><a href="#absensi"><i class="fas fa-arrow-right"></i> Absensi Digital</a></li>
+                        <li><a href="#elearning"><i class="fas fa-arrow-right"></i> Platform E-Learning</a></li>
+                        <li><a href="#bell-iot"><i class="fas fa-arrow-right"></i> Bell IoT</a></li>
+                        <li><a href="#"><i class="fas fa-arrow-right"></i> Dashboard Guru</a></li>
+                        <li><a href="#"><i class="fas fa-arrow-right"></i> Portal Orang Tua</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak Kami</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Dusun Karangrejo, Desa Grabag, Kec. Grabag, Kab.
+                            Magelang, Jawa Tengah</li>
+                        <li><i class="fas fa-phone"></i> (0293) XXX-XXXX</li>
+                        <li><i class="fas fa-envelope"></i> mtsmaarif3grabag@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Senin - Jumat: 07:00 - 15:30 WIB</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 MTs Ma'arif 3 Grabag. Semua Hak Dilindungi.</p>
+                <p style="margin-top: 5px;">Dikembangkan dengan ❤️ untuk pendidikan Indonesia</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Scroll to Top -->
+    <a href="#" class="scroll-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.style.flexDirection = 'column';
+            navLinks.style.position = 'absolute';
+            navLinks.style.top = '100%';
+            navLinks.style.left = '0';
+            navLinks.style.width = '100%';
+            navLinks.style.background = 'white';
+            navLinks.style.padding = '20px';
+            navLinks.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+        });
+        // Active Navigation
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-links a');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').substring(1) === current) {
+                    item.classList.add('active');
+                }
+            });
+            // Scroll to Top Button
+            const scrollTopBtn = document.querySelector('.scroll-top');
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.add('active');
+            } else {
+                scrollTopBtn.classList.remove('active');
+            }
+        });
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    if (window.innerWidth <= 768) {
+                        navLinks.style.display = 'none';
+                    }
+                }
+            });
+        });
+        // Animation on Scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        // Observe all animated elements
+        document.querySelectorAll('.animate-fadeInUp').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+        // Initialize animations
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.animate-fadeInUp').forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+    </script>
+</body>
+
+</html>
