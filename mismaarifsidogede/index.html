@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MTsN 4 Magelang</title>
+    <title>MIS Sidogede Grabag</title>
     <meta
       name="keywords"
-      content="MTsN 4 Magelang, Madrasah Tsanawiyah Negeri, Sekolah Islam Magelang, Pendidikan Menengah Pertama Islam"
+      content="MIS Sidogede, Madrasah Ibtidaiyah, Sekolah Islam Grabag, Pendidikan Dasar Islam"
     />
     <meta
       name="description"
-      content="MTsN 4 Magelang: Mengintegrasikan ilmu pengetahuan modern dengan nilai-nilai Al-Qur'an, membentuk generasi muda yang berprestasi, berakhlak mulia, dan siap menghadapi tantangan global."
+      content="MIS Sidogede Grabag: Menanamkan nilai Al-Qur'an sejak dini, membentuk generasi sholeh, cerdas, dan berkontribusi untuk bangsa."
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -78,10 +78,9 @@
         text-align: center;
         margin-bottom: 50px;
       }
-      .section-title p {
-        color: var(--gray);
-        max-width: 700px;
-        margin: 0 auto;
+      .section-title h2::after {
+        left: 50%;
+        transform: translateX(-50%);
       }
 
       /* ===== HEADER & NAVBAR ===== */
@@ -118,16 +117,16 @@
         width: 48px;
         height: 48px;
         object-fit: contain;
-      }
-      .logo img:first-child {
-        margin-right: -10px;
+        background: transparent;
       }
 
-      /* Desktop Menu */
+      /* DESKTOP MENU */
       nav ul {
         display: flex;
         list-style: none;
         gap: 28px;
+        margin: 0;
+        padding: 0;
       }
       nav ul li {
         position: relative;
@@ -159,7 +158,10 @@
         width: 100%;
       }
 
-      /* Dropdown Desktop */
+      /* DROPDOWN - DESKTOP */
+      .dropdown {
+        position: relative;
+      }
       .dropdown-content {
         display: none;
         position: absolute;
@@ -173,6 +175,9 @@
         z-index: 1000;
         list-style: none;
         padding: 0;
+      }
+      .dropdown-content li {
+        width: 100%;
       }
       .dropdown-content li a {
         color: var(--dark) !important;
@@ -190,20 +195,21 @@
         display: block;
       }
 
-      /* Mobile Menu Toggle */
+      /* MENU TOGGLE (MOBILE) */
       .menu-toggle {
         display: none;
         flex-direction: column;
         gap: 6px;
         cursor: pointer;
         z-index: 1001;
+        padding: 5px;
       }
       .menu-toggle span {
         width: 28px;
         height: 3px;
         background: white;
         border-radius: 3px;
-        transition: 0.3s;
+        transition: all 0.3s ease;
       }
       header.scrolled .menu-toggle span {
         background: var(--primary);
@@ -216,7 +222,7 @@
         align-items: center;
         background:
           linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-          url("https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80");
+          url("https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&q=80");
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -253,12 +259,14 @@
       }
       .btn:hover {
         background: transparent;
+        color: var(--primary);
         transform: translateY(-3px);
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
       }
-      .btn-outline {
-        background: transparent;
+      .btn-secondary {
+        background: var(--light);
         color: var(--primary);
+        border: 2px solid var(--primary);
       }
       .btn-demo {
         background: var(--primary);
@@ -297,6 +305,38 @@
         box-shadow: 0 8px 25px rgba(22, 160, 133, 0.6);
       }
 
+      /* ===== CARD & BOX UMUM ===== */
+      .card {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+      .badge {
+        background: #dcfce7;
+        color: #166534;
+        padding: 6px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+      .account-badge {
+        background: white;
+        border-radius: 12px;
+        padding: 15px;
+        margin: 15px 0;
+        border-left: 4px solid var(--primary);
+      }
+      .account-badge.accent {
+        border-left-color: var(--accent);
+      }
+
       /* ===== ABOUT SECTION ===== */
       #about {
         background-color: var(--light-gray);
@@ -329,13 +369,6 @@
       }
       .about-img:hover img {
         transform: scale(1.03);
-      }
-      .img-caption {
-        text-align: center;
-        padding: 10px;
-        background: rgba(0, 0, 0, 0.05);
-        font-size: 0.9rem;
-        color: var(--gray);
       }
 
       /* ===== VISI MISI ===== */
@@ -379,7 +412,7 @@
         margin-bottom: 8px;
       }
 
-      /* ===== KEUNGGULAN ===== */
+      /* ===== KEUNGGULAN (FEATURES) ===== */
       .features {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -475,7 +508,7 @@
       .media-wrapper {
         position: relative;
         width: 100%;
-        padding-bottom: 56.25%;
+        padding-bottom: 56.25%; /* 16:9 */
         height: 0;
         overflow: hidden;
         border-radius: 16px;
@@ -506,26 +539,6 @@
       }
       .image-pair img:hover {
         transform: scale(1.03);
-      }
-      .badge {
-        background: #dcfce7;
-        color: #166534;
-        padding: 6px 15px;
-        border-radius: 20px;
-        font-size: 0.9rem;
-        font-weight: 500;
-        display: inline-block;
-        margin-bottom: 10px;
-      }
-      .account-badge {
-        background: white;
-        border-radius: 12px;
-        padding: 15px;
-        margin: 15px 0;
-        border-left: 4px solid var(--primary);
-      }
-      .account-badge.accent {
-        border-left-color: var(--accent);
       }
       .demo-account-box {
         background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
@@ -574,8 +587,8 @@
       /* ===== KONTAK ===== */
       #contact {
         background:
-          linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-          url("https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80");
+          linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+          url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80");
         background-size: cover;
         background-position: center;
         color: white;
@@ -647,7 +660,7 @@
         font-size: 0.95rem;
       }
 
-      /* ===== MOBILE NAVBAR ===== */
+      /* ===== RESPONSIVE ===== */
       @media (max-width: 992px) {
         .about-grid,
         .contact-grid,
@@ -659,12 +672,14 @@
         }
       }
 
+      /* ===== MOBILE NAVBAR - VERSI BARU ===== */
       @media (max-width: 768px) {
-        /* Mobile Menu */
+        /* Menu Toggle */
         .menu-toggle {
           display: flex;
         }
 
+        /* Mobile Menu Container */
         nav ul {
           position: fixed;
           top: 0;
@@ -672,13 +687,13 @@
           width: 85%;
           max-width: 340px;
           height: 100vh;
-          background: white;
+          background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
           flex-direction: column;
           align-items: stretch;
           justify-content: flex-start;
           padding: 90px 20px 30px;
           gap: 5px;
-          transition: right 0.4s ease;
+          transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
           z-index: 1000;
           box-shadow: -5px 0 30px rgba(0, 0, 0, 0.15);
           overflow-y: auto;
@@ -688,16 +703,57 @@
           right: 0;
         }
 
+        /* Menu Items */
+        nav ul li {
+          width: 100%;
+          margin: 0;
+          opacity: 0;
+          transform: translateX(20px);
+          transition: all 0.3s ease;
+        }
+
+        nav ul.active li {
+          opacity: 1;
+          transform: translateX(0);
+        }
+
+        /* Stagger animation for menu items */
+        nav ul.active li:nth-child(1) {
+          transition-delay: 0.1s;
+        }
+        nav ul.active li:nth-child(2) {
+          transition-delay: 0.15s;
+        }
+        nav ul.active li:nth-child(3) {
+          transition-delay: 0.2s;
+        }
+        nav ul.active li:nth-child(4) {
+          transition-delay: 0.25s;
+        }
+        nav ul.active li:nth-child(5) {
+          transition-delay: 0.3s;
+        }
+        nav ul.active li:nth-child(6) {
+          transition-delay: 0.35s;
+        }
+        nav ul.active li:nth-child(7) {
+          transition-delay: 0.4s;
+        }
+
+        /* Menu Links */
         nav ul li a {
           color: var(--dark) !important;
           font-size: 1.1rem;
           padding: 15px 20px;
           border-radius: 10px;
+          transition: all 0.3s ease;
+          border: none;
         }
 
         nav ul li a:hover {
           background: rgba(30, 132, 73, 0.1);
           color: var(--primary) !important;
+          padding-left: 25px;
         }
 
         nav ul li a::after {
@@ -705,6 +761,39 @@
         }
 
         /* Dropdown Mobile */
+        .dropdown {
+          width: 100%;
+        }
+
+        .dropdown .dropbtn {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          padding: 15px 20px;
+          margin: 0;
+          border-radius: 10px;
+        }
+
+        .dropdown .dropbtn::after {
+          content: "\f107";
+          font-family: "Font Awesome 6 Free";
+          font-weight: 900;
+          margin-left: 8px;
+          transition: transform 0.3s ease;
+          color: var(--primary);
+        }
+
+        .dropdown.active .dropbtn {
+          background: rgba(30, 132, 73, 0.1);
+          color: var(--primary) !important;
+        }
+
+        .dropdown.active .dropbtn::after {
+          transform: rotate(180deg);
+        }
+
+        /* Dropdown Content Mobile */
         .dropdown-content {
           position: static;
           display: none;
@@ -720,46 +809,63 @@
           display: block;
         }
 
-        .dropdown .dropbtn {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
+        .dropdown-content li {
           width: 100%;
-        }
-
-        .dropdown .dropbtn::after {
-          content: "\f107";
-          font-family: "Font Awesome 6 Free";
-          font-weight: 900;
-          margin-left: 8px;
-          transition: transform 0.3s ease;
-          color: var(--primary);
-        }
-
-        .dropdown.active .dropbtn::after {
-          transform: rotate(180deg);
         }
 
         .dropdown-content li a {
           padding: 12px 20px !important;
+          font-size: 1rem;
+          color: var(--gray) !important;
           border-left: 3px solid transparent;
         }
 
         .dropdown-content li a:hover {
+          background: rgba(30, 132, 73, 0.05);
+          color: var(--primary) !important;
           border-left-color: var(--primary);
+          padding-left: 25px;
+        }
+
+        /* Close button overlay */
+        .menu-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s ease;
+          z-index: 999;
+        }
+
+        .menu-overlay.active {
+          opacity: 1;
+          visibility: visible;
         }
 
         /* Menu Toggle Animation */
         .menu-toggle.active span:nth-child(1) {
           transform: rotate(45deg) translate(8px, 8px);
         }
+
         .menu-toggle.active span:nth-child(2) {
           opacity: 0;
+          transform: scale(0);
         }
+
         .menu-toggle.active span:nth-child(3) {
           transform: rotate(-45deg) translate(7px, -7px);
         }
 
+        /* Header adjustments for mobile */
+        header.scrolled {
+          background: rgba(255, 255, 255, 0.98);
+        }
+
+        /* Typography adjustments */
         h2 {
           font-size: 1.8rem;
         }
@@ -768,17 +874,44 @@
           grid-template-columns: 1fr;
         }
       }
+
+      /* Small mobile devices */
+      @media (max-width: 480px) {
+        nav ul {
+          width: 90%;
+          padding: 80px 15px 20px;
+        }
+
+        .logo span {
+          font-size: 1rem;
+        }
+
+        .logo img {
+          width: 40px;
+          height: 40px;
+        }
+
+        nav ul li a {
+          font-size: 1rem;
+          padding: 12px 15px;
+        }
+      }
     </style>
   </head>
   <body>
+    <!-- Overlay for mobile menu -->
+    <div class="menu-overlay"></div>
+
     <!-- Header -->
     <header id="navbar">
       <div class="container">
         <nav>
           <a href="#home" class="logo">
-            <img src="assets/logo.png" alt="Logo MTsN 4 Magelang" />
-            <img src="assets/logo2.png" alt="Logo MTsN 4 Magelang 2" />
-            <span>MTsN 4 MAGELANG</span>
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,10 90,35 90,75 50,95 10,75 10,35' fill='%231e8449' stroke='%23fff' stroke-width='2'/%3E%3Ctext x='50' y='60' font-family='Arial' font-size='40' font-weight='bold' text-anchor='middle' fill='%23fff'%3EMIS%3C/text%3E%3C/svg%3E"
+              alt="Logo MIS Sidogede Grabag"
+            />
+            <span>MIS SIDOGEDE</span>
           </a>
           <ul>
             <li><a href="#home">Beranda</a></li>
@@ -809,12 +942,11 @@
     <section id="home">
       <div class="container">
         <div class="hero-content">
-          <h1>Integrasi Ilmu & Iman, Membangun Generasi Berkarakter</h1>
+          <h1>Menanamkan Nilai Qur’ani, Membentuk Generasi Emas</h1>
           <p>
-            MTsN 4 Magelang menyelenggarakan pendidikan menengah pertama
-            berbasis Islam yang menggabungkan keunggulan akademik, pengembangan
-            karakter, dan penguatan nilai-nilai Qur'ani untuk menghadapi
-            tantangan abad 21.
+            MIS Sidogede Grabag hadir sebagai wadah pendidikan dasar yang
+            menggabungkan kecerdasan intelektual, spiritual, dan karakter islami
+            sejak usia dini.
           </p>
           <a href="#contact" class="btn">Daftar Sekarang</a>
         </div>
@@ -827,32 +959,30 @@
         <h2>Profil Sekolah</h2>
         <div class="about-grid">
           <div class="about-text">
-            <h3>Madrasah Tsanawiyah Negeri 4 Magelang</h3>
+            <h3>Madrasah Ibtidaiyah Swasta Sidogede</h3>
             <p>
-              MTsN 4 Magelang merupakan lembaga pendidikan menengah pertama
-              negeri di bawah naungan Kementerian Agama RI yang berkomitmen
-              menyelenggarakan pendidikan berkualitas dengan integrasi ilmu
-              pengetahuan umum dan keagamaan.
+              Berdiri sejak tahun 2005, MIS Sidogede Grabag telah menjadi
+              pilihan utama orang tua di wilayah Magelang bagian utara yang
+              menginginkan pendidikan dasar berbasis nilai-nilai Islam.
             </p>
             <p>
-              Berlokasi strategis di Kabupaten Magelang, kami menyediakan
-              lingkungan belajar yang kondusif dengan fasilitas memadai, tenaga
-              pendidik profesional, serta kurikulum yang mengacu pada standar
-              nasional pendidikan yang diperkaya dengan nilai-nilai Islam.
+              Kami percaya bahwa fondasi pendidikan yang kuat dimulai dari
+              lingkungan yang penuh kasih, disiplin, dan keteladanan. Di sini,
+              setiap anak didik tidak hanya belajar membaca dan berhitung,
+              tetapi juga belajar menjadi pribadi yang jujur, tanggung jawab,
+              dan peduli.
             </p>
             <p>
-              Kami menyiapkan siswa tidak hanya untuk melanjutkan ke jenjang
-              pendidikan yang lebih tinggi, tetapi juga menjadi pribadi yang
-              berakhlak mulia, kritis, kreatif, dan siap berkontribusi positif
-              bagi masyarakat dan bangsa.
+              Dengan kurikulum Kemenag yang diperkaya oleh program tahfidz,
+              akhlak harian, dan pembiasaan ibadah, kami siap menyiapkan
+              generasi masa depan yang unggul di dunia dan akhirat.
             </p>
           </div>
           <div class="about-img">
             <img
-              src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80"
-              alt="Kampus MTsN 4 Magelang"
+              src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80"
+              alt="Kampus MIS Sidogede Grabag"
             />
-            <div class="img-caption">Kampus MTsN 4 Magelang</div>
           </div>
         </div>
       </div>
@@ -866,29 +996,26 @@
           <div class="vm-card">
             <h3><i class="fas fa-eye"></i> Visi</h3>
             <p>
-              Terwujudnya generasi yang unggul dan berakhlak mulia serta
-              berwawasan lingkungan.
+              Menjadi madrasah unggulan yang melahirkan generasi Qur’ani,
+              berprestasi, berakhlak mulia, dan berwawasan global.
             </p>
           </div>
           <div class="vm-card">
             <h3><i class="fas fa-bullseye"></i> Misi</h3>
             <ul>
               <li>
-                Meningkatkan keunggulan prestasi akademik dan non akademik.
+                Menyelenggarakan pendidikan berbasis Al-Qur’an dan As-Sunnah
               </li>
               <li>
-                Melaksanakan pembelajaran dan pembimbingan secara efektif untuk
-                meningkatkan potensi dan bakat peserta didik
+                Mengembangkan potensi akademik dan non-akademik secara seimbang
               </li>
-              <li>Menanamkan nilai-nilai moderasi beragama</li>
+              <li>Menanamkan nilai-nilai akhlakul karimah dalam keseharian</li>
               <li>
-                Menguatkan profil pelajar pancasila dan rahmatan lil alamin
+                Menciptakan lingkungan belajar yang aman, nyaman, dan inspiratif
               </li>
               <li>
-                Membudayakan peserta didik mengamalkan nilai-nilai akhlak yang
-                terpuji
+                Memperkuat sinergi antara sekolah, keluarga, dan masyarakat
               </li>
-              <li>Membudayakan peserta didik berwawasan lingkungan</li>
             </ul>
           </div>
         </div>
@@ -902,34 +1029,26 @@
         <div class="features">
           <div class="feature-card">
             <div class="feature-icon"><i class="fas fa-quran"></i></div>
-            <h3>Tahfidz & Tahsin</h3>
-            <p>
-              Program hafalan Al-Qur'an dan perbaikan bacaan secara bertahap
-              hingga 5 juz.
-            </p>
+            <h3>Tahfidz Qur’an</h3>
+            <p>Program hafalan surat pendek & juz ‘amma sejak kelas 1.</p>
           </div>
           <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-flask"></i></div>
-            <h3>Laboratorium Modern</h3>
-            <p>
-              Fasilitas lab IPA, komputer, dan bahasa yang lengkap dan
-              representatif.
-            </p>
+            <div class="feature-icon">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <h3>Guru Teladan</h3>
+            <p>Pendidik berkompeten, bersertifikat, dan berakhlak baik.</p>
           </div>
           <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-trophy"></i></div>
-            <h3>Prestasi Kompetitif</h3>
-            <p>
-              Rutin meraih juara olimpiade sains, MTQ, dan kompetisi akademik
-              tingkat provinsi.
-            </p>
+            <div class="feature-icon"><i class="fas fa-medal"></i></div>
+            <h3>Prestasi Nyata</h3>
+            <p>Rutin juara lomba MTQ, sains, dan seni tingkat kecamatan.</p>
           </div>
           <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-robot"></i></div>
-            <h3>Ekstrakurikuler Unggulan</h3>
+            <div class="feature-icon"><i class="fas fa-school"></i></div>
+            <h3>Lingkungan Islami</h3>
             <p>
-              Robotik, programming, jurnalistik, dan seni kontemporer untuk
-              pengembangan bakat.
+              Sholat Dhuha, dzuhur berjamaah, dan pembiasaan adab sehari-hari.
             </p>
           </div>
         </div>
@@ -942,27 +1061,39 @@
         <h2>Dokumentasi Kegiatan</h2>
         <div class="gallery-cards">
           <div class="gallery-card">
-            <img src="assets/workshop.jpg" alt="Workshop Guru" />
-            <div class="card-caption">Pelatihan Guru</div>
+            <img
+              src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80"
+              alt="Belajar Bersama"
+            />
+            <div class="card-caption">Belajar Bersama</div>
           </div>
           <div class="gallery-card">
-            <img src="assets/classmeet.jpg" alt="Laboratorium IPA" />
-            <div class="card-caption">Kegiatan Siswa Classmeet</div>
+            <img
+              src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80"
+              alt="MTQ Anak-Anak"
+            />
+            <div class="card-caption">MTQ Anak-Anak</div>
           </div>
           <div class="gallery-card">
-            <img src="assets/ngaji.jpg" alt="MTQ Tingkat Tsanawiyah" />
-            <div class="card-caption">Pembiasaan Siswa Madrasah</div>
+            <img
+              src="https://images.pexels.com/photos/3875190/pexels-photo-3875190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Pramuka"
+            />
+            <div class="card-caption">Pramuka</div>
           </div>
           <div class="gallery-card">
-            <img src="assets/pramuka.jpeg" alt="Ekstrakurikuler Robotik" />
-            <div class="card-caption">Kepramukaan</div>
+            <img
+              src="https://images.pexels.com/photos/6984310/pexels-photo-6984310.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Lomba Kaligrafi"
+            />
+            <div class="card-caption">Lomba Kaligrafi</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ABSENSI DIGITAL -->
-    <section id="absensi">
+    <section id="absensi" class="reveal">
       <div class="container">
         <div class="section-title">
           <h2>Absensi Digital</h2>
@@ -982,8 +1113,14 @@
                 ></iframe>
               </div>
               <div class="image-pair">
-                <img src="assets/absen1.jpeg" alt="Absen Siswa 1" />
-                <img src="assets/absen2.jpeg" alt="Absen Siswa 2" />
+                <img
+                  src="https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="Absen Siswa 1"
+                />
+                <img
+                  src="https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="Absen Siswa 2"
+                />
               </div>
               <div class="account-badge">
                 <strong><i class="fas fa-key"></i> Akun Demo Siswa</strong
@@ -1009,8 +1146,14 @@
                 ></iframe>
               </div>
               <div class="image-pair">
-                <img src="assets/absen_guru1.png" alt="Presensi Guru 1" />
-                <img src="assets/absen_guru2.png" alt="Presensi Guru 2" />
+                <img
+                  src="https://images.pexels.com/photos/3769714/pexels-photo-3769714.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="Presensi Guru 1"
+                />
+                <img
+                  src="https://images.pexels.com/photos/3769714/pexels-photo-3769714.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="Presensi Guru 2"
+                />
               </div>
               <div class="account-badge accent">
                 <strong><i class="fas fa-key"></i> Akun Demo Guru</strong><br />
@@ -1032,7 +1175,7 @@
     </section>
 
     <!-- E-LEARNING PREVIEW -->
-    <section id="elearning">
+    <section id="elearning" class="reveal">
       <div class="container">
         <div class="section-title">
           <h2>E-Learning Sekolah</h2>
@@ -1191,21 +1334,23 @@
       <div class="container">
         <h2>Hubungi Kami</h2>
         <div class="contact-grid">
-          <form class="contact-form">
+          <form class="contact-form" action="#" method="post">
             <input type="text" placeholder="Nama Lengkap" required />
             <input type="email" placeholder="Email atau No. HP" required />
             <textarea placeholder="Pesan Anda..."></textarea>
             <button type="submit" class="submit-btn">Kirim Pesan</button>
+            <p style="font-size: 0.8rem; margin-top: 10px; color: #ccc">
+              *Form akan mengirim ke email sekolah (demo).
+            </p>
           </form>
           <div class="contact-info-box">
             <p>
-              <i class="fas fa-map-marker-alt"></i> Jl. Raya Magelang -
-              Temanggung Km. 15, Kec. Grabag, Kab. Magelang, Jawa Tengah 56195
+              <i class="fas fa-map-marker-alt"></i> Dusun Sidogede, Desa Grabag,
+              Kec. Grabag, Kab. Magelang, Jawa Tengah
             </p>
-            <p><i class="fas fa-phone"></i> (0293) 695-2001</p>
-            <p><i class="fas fa-envelope"></i> mtsn4magelang@kemenag.go.id</p>
-            <p><i class="fas fa-globe"></i> www.mtsn4magelang.sch.id</p>
-            <p><i class="fas fa-clock"></i> Senin–Jumat • 07.00–15.30 WIB</p>
+            <p><i class="fas fa-phone"></i> 0812-3456-7890</p>
+            <p><i class="fas fa-envelope"></i> info@missidogede.sch.id</p>
+            <p><i class="fas fa-clock"></i> Senin–Jumat • 07.00–14.00 WIB</p>
           </div>
         </div>
       </div>
@@ -1213,8 +1358,8 @@
 
     <!-- Footer -->
     <footer>
-      <p>&copy; 2026 MTsN 4 Magelang. All Rights Reserved.</p>
-      <p>Integrasi Ilmu & Iman, Membangun Generasi Berkarakter.</p>
+      <p>&copy; 2026 MIS Sidogede Grabag. All Rights Reserved.</p>
+      <p>Menanamkan nilai Qur’ani, membentuk generasi emas.</p>
     </footer>
 
     <script>
@@ -1224,7 +1369,7 @@
         header.classList.toggle("scrolled", window.scrollY > 50);
       });
 
-      // Smooth scroll
+      // Smooth scroll & active link
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
@@ -1232,39 +1377,70 @@
           if (target) {
             target.scrollIntoView({ behavior: "smooth" });
           }
-        });
-      });
-
-      // Mobile Menu Toggle
-      const menuToggle = document.querySelector(".menu-toggle");
-      const navMenu = document.querySelector("nav ul");
-
-      menuToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-        menuToggle.classList.toggle("active");
-      });
-
-      // Close menu when clicking on a link
-      document.querySelectorAll("nav ul li a").forEach((link) => {
-        link.addEventListener("click", () => {
+          // Close mobile menu if open
           if (window.innerWidth <= 768) {
             navMenu.classList.remove("active");
             menuToggle.classList.remove("active");
+            menuOverlay.classList.remove("active");
+            document.body.style.overflow = "";
           }
         });
       });
+
+      // Mobile Menu Elements
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navMenu = document.querySelector("nav ul");
+      const menuOverlay = document.querySelector(".menu-overlay");
+
+      // Toggle Menu Function
+      function toggleMenu() {
+        navMenu.classList.toggle("active");
+        menuToggle.classList.toggle("active");
+        menuOverlay.classList.toggle("active");
+        document.body.style.overflow = navMenu.classList.contains("active")
+          ? "hidden"
+          : "";
+      }
+
+      // Menu Toggle Click
+      if (menuToggle) {
+        menuToggle.addEventListener("click", toggleMenu);
+      }
+
+      // Overlay Click
+      if (menuOverlay) {
+        menuOverlay.addEventListener("click", toggleMenu);
+      }
 
       // Dropdown mobile toggle
       if (window.innerWidth <= 768) {
         const dropdowns = document.querySelectorAll(".dropdown");
         dropdowns.forEach((dropdown) => {
           const dropbtn = dropdown.querySelector(".dropbtn");
-          dropbtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            dropdown.classList.toggle("active");
-          });
+          if (dropbtn) {
+            dropbtn.addEventListener("click", (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              dropdown.classList.toggle("active");
+            });
+          }
         });
       }
+
+      // Handle window resize
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) {
+          navMenu.classList.remove("active");
+          menuToggle.classList.remove("active");
+          menuOverlay.classList.remove("active");
+          document.body.style.overflow = "";
+
+          // Reset dropdown active state
+          document.querySelectorAll(".dropdown.active").forEach((dropdown) => {
+            dropdown.classList.remove("active");
+          });
+        }
+      });
 
       // Active link on scroll
       window.addEventListener("scroll", () => {
@@ -1275,28 +1451,17 @@
         sections.forEach((section) => {
           const sectionTop = section.offsetTop;
           const sectionHeight = section.clientHeight;
-          if (window.scrollY >= sectionTop - 100) {
+          if (window.scrollY >= sectionTop - 150) {
             current = section.getAttribute("id");
           }
         });
 
         navLinks.forEach((link) => {
           link.classList.remove("active");
-          if (link.getAttribute("href").substring(1) === current) {
+          if (link.getAttribute("href") === `#${current}`) {
             link.classList.add("active");
           }
         });
-      });
-
-      // Handle window resize
-      window.addEventListener("resize", () => {
-        if (window.innerWidth > 768) {
-          navMenu.classList.remove("active");
-          menuToggle.classList.remove("active");
-          document.querySelectorAll(".dropdown.active").forEach((dropdown) => {
-            dropdown.classList.remove("active");
-          });
-        }
       });
     </script>
   </body>
